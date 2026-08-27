@@ -1,0 +1,953 @@
+Miranda! - Perfecta debug log
+Generated: 2026-05-12T18:08:24.204Z
+
+Cue sheet:
+01. 00:03.000 | Tan pronto yo te vi
+02. 00:05.000 | No pude descubrir
+03. 00:07.000 | El amor a primera vista no funciona en mí
+04. 00:11.000 | Después de amarte comprendí
+05. 00:14.000 | Que no estaría tan mal
+06. 00:15.000 | Probar tu otra mitad
+07. 00:18.000 | No me importó si arruinaríamos nuestra amistad
+08. 00:21.000 | No me importó y ya qué más da
+09. 00:24.000 | Éramos tan buenos amigos hasta hoy
+10. 00:27.000 | Que yo probé tu desempeño en el amor
+11. 00:30.000 | Me aproveché de que habíamos tomado tanto
+12. 00:33.000 | Te fuiste dejando y te agarré
+13. 00:35.000 | A pesar de saber que estaba todo mal
+14. 00:38.000 | Lo continuamos hasta juntos terminar
+15. 00:40.000 | Cuando caímos en lo que estaba pasando
+16. 00:43.000 | Te seguí besando y fue...
+17. 00:45.000 | Solo tú, no necesito más
+18. 00:47.000 | Te adoraría lo que dure la eternidad
+19. 00:51.000 | Debes ser perfecta para, perfecto para
+20. 00:54.000 | Perfecta para mí, mi amor
+21. 00:58.000 | ¿Cómo fue que de papel cambié?
+22. 01:00.000 | Eras mi amiga y ahora eres mi mujer
+23. 01:04.000 | Debes ser perfectamente, exactamente
+24. 01:07.000 | Lo que yo siempre soñé
+25. 01:14.000 | El tiempo que pasó
+26. 01:16.000 | Resultó aún mejor
+27. 01:19.000 | Nos conocíamos de antes y sabíamos
+28. 01:21.000 | Lo que queríamos los dos
+29. 01:24.000 | Entonces el amor
+30. 01:28.000 | Nos tiene de rehén
+31. 01:30.000 | Seré tu eterna enamorada y te aseguro que
+32. 01:33.000 | Todas las noches te amaré
+33. 01:36.000 | Éramos tan buenos amigos hasta hoy
+34. 01:57.000 | Solo tú, no necesito más
+35. 02:24.000 | Solo tú, no necesito más
+36. 02:27.000 | Te adoraría lo que dure la eternidad
+37. 02:30.000 | Debes ser perfecta para, perfecto para
+38. 02:34.000 | Perfecta para mí, mi amor
+39. 02:37.000 | ¿Cómo fue que de papel cambié?
+40. 02:40.000 | Eras mi amiga y ahora eres mi mujer
+41. 02:43.000 | Debes ser perfectamente, exactamente
+42. 02:47.000 | Lo que yo siempre soñé
+
+Playback log:
+[00:00.000] prev=null | next=Tan pronto yo te vi
+[00:00.102] prev=null | next=Tan pronto yo te vi
+[00:00.377] prev=null | next=Tan pronto yo te vi
+[00:00.595] prev=null | next=Tan pronto yo te vi
+[00:00.844] prev=null | next=Tan pronto yo te vi
+[00:01.094] prev=null | next=Tan pronto yo te vi
+[00:01.344] prev=null | next=Tan pronto yo te vi
+[00:01.594] prev=null | next=Tan pronto yo te vi
+[00:01.845] prev=null | next=Tan pronto yo te vi
+[00:02.095] prev=null | next=Tan pronto yo te vi
+[00:02.344] prev=null | next=Tan pronto yo te vi
+[00:02.595] prev=null | next=Tan pronto yo te vi
+[00:02.844] prev=null | next=Tan pronto yo te vi
+[00:03.117] prev=Tan pronto yo te vi | next=No pude descubrir
+[00:03.382] prev=Tan pronto yo te vi | next=No pude descubrir
+[00:03.595] prev=Tan pronto yo te vi | next=No pude descubrir
+[00:03.844] prev=Tan pronto yo te vi | next=No pude descubrir
+[00:04.094] prev=Tan pronto yo te vi | next=No pude descubrir
+[00:04.345] prev=Tan pronto yo te vi | next=No pude descubrir
+[00:04.595] prev=Tan pronto yo te vi | next=No pude descubrir
+[00:04.844] prev=Tan pronto yo te vi | next=No pude descubrir
+[00:05.095] prev=No pude descubrir | next=El amor a primera vista no funciona en mí
+[00:05.397] prev=No pude descubrir | next=El amor a primera vista no funciona en mí
+[00:05.595] prev=No pude descubrir | next=El amor a primera vista no funciona en mí
+[00:05.844] prev=No pude descubrir | next=El amor a primera vista no funciona en mí
+[00:06.095] prev=No pude descubrir | next=El amor a primera vista no funciona en mí
+[00:06.345] prev=No pude descubrir | next=El amor a primera vista no funciona en mí
+[00:06.595] prev=No pude descubrir | next=El amor a primera vista no funciona en mí
+[00:06.844] prev=No pude descubrir | next=El amor a primera vista no funciona en mí
+[00:07.094] prev=El amor a primera vista no funciona en mí | next=Después de amarte comprendí
+[00:07.345] prev=El amor a primera vista no funciona en mí | next=Después de amarte comprendí
+[00:07.594] prev=El amor a primera vista no funciona en mí | next=Después de amarte comprendí
+[00:07.845] prev=El amor a primera vista no funciona en mí | next=Después de amarte comprendí
+[00:08.095] prev=El amor a primera vista no funciona en mí | next=Después de amarte comprendí
+[00:08.345] prev=El amor a primera vista no funciona en mí | next=Después de amarte comprendí
+[00:08.595] prev=El amor a primera vista no funciona en mí | next=Después de amarte comprendí
+[00:08.845] prev=El amor a primera vista no funciona en mí | next=Después de amarte comprendí
+[00:09.094] prev=El amor a primera vista no funciona en mí | next=Después de amarte comprendí
+[00:09.344] prev=El amor a primera vista no funciona en mí | next=Después de amarte comprendí
+[00:09.595] prev=El amor a primera vista no funciona en mí | next=Después de amarte comprendí
+[00:09.845] prev=El amor a primera vista no funciona en mí | next=Después de amarte comprendí
+[00:10.094] prev=El amor a primera vista no funciona en mí | next=Después de amarte comprendí
+[00:10.345] prev=El amor a primera vista no funciona en mí | next=Después de amarte comprendí
+[00:10.594] prev=El amor a primera vista no funciona en mí | next=Después de amarte comprendí
+[00:10.846] prev=El amor a primera vista no funciona en mí | next=Después de amarte comprendí
+[00:11.095] prev=Después de amarte comprendí | next=Que no estaría tan mal
+[00:11.344] prev=Después de amarte comprendí | next=Que no estaría tan mal
+[00:11.595] prev=Después de amarte comprendí | next=Que no estaría tan mal
+[00:11.844] prev=Después de amarte comprendí | next=Que no estaría tan mal
+[00:12.094] prev=Después de amarte comprendí | next=Que no estaría tan mal
+[00:12.374] prev=Después de amarte comprendí | next=Que no estaría tan mal
+[00:12.594] prev=Después de amarte comprendí | next=Que no estaría tan mal
+[00:12.845] prev=Después de amarte comprendí | next=Que no estaría tan mal
+[00:13.095] prev=Después de amarte comprendí | next=Que no estaría tan mal
+[00:13.344] prev=Después de amarte comprendí | next=Que no estaría tan mal
+[00:13.594] prev=Después de amarte comprendí | next=Que no estaría tan mal
+[00:13.845] prev=Después de amarte comprendí | next=Que no estaría tan mal
+[00:14.095] prev=Que no estaría tan mal | next=Probar tu otra mitad
+[00:14.344] prev=Que no estaría tan mal | next=Probar tu otra mitad
+[00:14.594] prev=Que no estaría tan mal | next=Probar tu otra mitad
+[00:14.844] prev=Que no estaría tan mal | next=Probar tu otra mitad
+[00:15.118] prev=Probar tu otra mitad | next=No me importó si arruinaríamos nuestra amistad
+[00:15.344] prev=Probar tu otra mitad | next=No me importó si arruinaríamos nuestra amistad
+[00:15.594] prev=Probar tu otra mitad | next=No me importó si arruinaríamos nuestra amistad
+[00:15.845] prev=Probar tu otra mitad | next=No me importó si arruinaríamos nuestra amistad
+[00:16.094] prev=Probar tu otra mitad | next=No me importó si arruinaríamos nuestra amistad
+[00:16.345] prev=Probar tu otra mitad | next=No me importó si arruinaríamos nuestra amistad
+[00:16.594] prev=Probar tu otra mitad | next=No me importó si arruinaríamos nuestra amistad
+[00:16.845] prev=Probar tu otra mitad | next=No me importó si arruinaríamos nuestra amistad
+[00:17.095] prev=Probar tu otra mitad | next=No me importó si arruinaríamos nuestra amistad
+[00:17.345] prev=Probar tu otra mitad | next=No me importó si arruinaríamos nuestra amistad
+[00:17.594] prev=Probar tu otra mitad | next=No me importó si arruinaríamos nuestra amistad
+[00:17.845] prev=Probar tu otra mitad | next=No me importó si arruinaríamos nuestra amistad
+[00:18.095] prev=No me importó si arruinaríamos nuestra amistad | next=No me importó y ya qué más da
+[00:18.344] prev=No me importó si arruinaríamos nuestra amistad | next=No me importó y ya qué más da
+[00:18.595] prev=No me importó si arruinaríamos nuestra amistad | next=No me importó y ya qué más da
+[00:18.844] prev=No me importó si arruinaríamos nuestra amistad | next=No me importó y ya qué más da
+[00:19.094] prev=No me importó si arruinaríamos nuestra amistad | next=No me importó y ya qué más da
+[00:19.344] prev=No me importó si arruinaríamos nuestra amistad | next=No me importó y ya qué más da
+[00:19.595] prev=No me importó si arruinaríamos nuestra amistad | next=No me importó y ya qué más da
+[00:19.844] prev=No me importó si arruinaríamos nuestra amistad | next=No me importó y ya qué más da
+[00:20.094] prev=No me importó si arruinaríamos nuestra amistad | next=No me importó y ya qué más da
+[00:20.345] prev=No me importó si arruinaríamos nuestra amistad | next=No me importó y ya qué más da
+[00:20.594] prev=No me importó si arruinaríamos nuestra amistad | next=No me importó y ya qué más da
+[00:20.844] prev=No me importó si arruinaríamos nuestra amistad | next=No me importó y ya qué más da
+[00:21.094] prev=No me importó y ya qué más da | next=Éramos tan buenos amigos hasta hoy
+[00:21.344] prev=No me importó y ya qué más da | next=Éramos tan buenos amigos hasta hoy
+[00:21.595] prev=No me importó y ya qué más da | next=Éramos tan buenos amigos hasta hoy
+[00:21.845] prev=No me importó y ya qué más da | next=Éramos tan buenos amigos hasta hoy
+[00:22.094] prev=No me importó y ya qué más da | next=Éramos tan buenos amigos hasta hoy
+[00:22.345] prev=No me importó y ya qué más da | next=Éramos tan buenos amigos hasta hoy
+[00:22.595] prev=No me importó y ya qué más da | next=Éramos tan buenos amigos hasta hoy
+[00:22.845] prev=No me importó y ya qué más da | next=Éramos tan buenos amigos hasta hoy
+[00:23.094] prev=No me importó y ya qué más da | next=Éramos tan buenos amigos hasta hoy
+[00:23.345] prev=No me importó y ya qué más da | next=Éramos tan buenos amigos hasta hoy
+[00:23.595] prev=No me importó y ya qué más da | next=Éramos tan buenos amigos hasta hoy
+[00:23.844] prev=No me importó y ya qué más da | next=Éramos tan buenos amigos hasta hoy
+[00:24.099] prev=Éramos tan buenos amigos hasta hoy | next=Que yo probé tu desempeño en el amor
+[00:24.345] prev=Éramos tan buenos amigos hasta hoy | next=Que yo probé tu desempeño en el amor
+[00:24.594] prev=Éramos tan buenos amigos hasta hoy | next=Que yo probé tu desempeño en el amor
+[00:24.844] prev=Éramos tan buenos amigos hasta hoy | next=Que yo probé tu desempeño en el amor
+[00:25.095] prev=Éramos tan buenos amigos hasta hoy | next=Que yo probé tu desempeño en el amor
+[00:25.345] prev=Éramos tan buenos amigos hasta hoy | next=Que yo probé tu desempeño en el amor
+[00:25.595] prev=Éramos tan buenos amigos hasta hoy | next=Que yo probé tu desempeño en el amor
+[00:25.844] prev=Éramos tan buenos amigos hasta hoy | next=Que yo probé tu desempeño en el amor
+[00:26.094] prev=Éramos tan buenos amigos hasta hoy | next=Que yo probé tu desempeño en el amor
+[00:26.344] prev=Éramos tan buenos amigos hasta hoy | next=Que yo probé tu desempeño en el amor
+[00:26.594] prev=Éramos tan buenos amigos hasta hoy | next=Que yo probé tu desempeño en el amor
+[00:26.845] prev=Éramos tan buenos amigos hasta hoy | next=Que yo probé tu desempeño en el amor
+[00:27.095] prev=Que yo probé tu desempeño en el amor | next=Me aproveché de que habíamos tomado tanto
+[00:27.345] prev=Que yo probé tu desempeño en el amor | next=Me aproveché de que habíamos tomado tanto
+[00:27.594] prev=Que yo probé tu desempeño en el amor | next=Me aproveché de que habíamos tomado tanto
+[00:27.844] prev=Que yo probé tu desempeño en el amor | next=Me aproveché de que habíamos tomado tanto
+[00:28.095] prev=Que yo probé tu desempeño en el amor | next=Me aproveché de que habíamos tomado tanto
+[00:28.344] prev=Que yo probé tu desempeño en el amor | next=Me aproveché de que habíamos tomado tanto
+[00:28.595] prev=Que yo probé tu desempeño en el amor | next=Me aproveché de que habíamos tomado tanto
+[00:28.844] prev=Que yo probé tu desempeño en el amor | next=Me aproveché de que habíamos tomado tanto
+[00:29.094] prev=Que yo probé tu desempeño en el amor | next=Me aproveché de que habíamos tomado tanto
+[00:29.345] prev=Que yo probé tu desempeño en el amor | next=Me aproveché de que habíamos tomado tanto
+[00:29.595] prev=Que yo probé tu desempeño en el amor | next=Me aproveché de que habíamos tomado tanto
+[00:29.845] prev=Que yo probé tu desempeño en el amor | next=Me aproveché de que habíamos tomado tanto
+[00:30.094] prev=Me aproveché de que habíamos tomado tanto | next=Te fuiste dejando y te agarré
+[00:30.345] prev=Me aproveché de que habíamos tomado tanto | next=Te fuiste dejando y te agarré
+[00:30.596] prev=Me aproveché de que habíamos tomado tanto | next=Te fuiste dejando y te agarré
+[00:30.845] prev=Me aproveché de que habíamos tomado tanto | next=Te fuiste dejando y te agarré
+[00:31.095] prev=Me aproveché de que habíamos tomado tanto | next=Te fuiste dejando y te agarré
+[00:31.346] prev=Me aproveché de que habíamos tomado tanto | next=Te fuiste dejando y te agarré
+[00:31.595] prev=Me aproveché de que habíamos tomado tanto | next=Te fuiste dejando y te agarré
+[00:31.844] prev=Me aproveché de que habíamos tomado tanto | next=Te fuiste dejando y te agarré
+[00:32.095] prev=Me aproveché de que habíamos tomado tanto | next=Te fuiste dejando y te agarré
+[00:32.345] prev=Me aproveché de que habíamos tomado tanto | next=Te fuiste dejando y te agarré
+[00:32.594] prev=Me aproveché de que habíamos tomado tanto | next=Te fuiste dejando y te agarré
+[00:32.844] prev=Me aproveché de que habíamos tomado tanto | next=Te fuiste dejando y te agarré
+[00:33.095] prev=Te fuiste dejando y te agarré | next=A pesar de saber que estaba todo mal
+[00:33.344] prev=Te fuiste dejando y te agarré | next=A pesar de saber que estaba todo mal
+[00:33.595] prev=Te fuiste dejando y te agarré | next=A pesar de saber que estaba todo mal
+[00:33.845] prev=Te fuiste dejando y te agarré | next=A pesar de saber que estaba todo mal
+[00:34.094] prev=Te fuiste dejando y te agarré | next=A pesar de saber que estaba todo mal
+[00:34.344] prev=Te fuiste dejando y te agarré | next=A pesar de saber que estaba todo mal
+[00:34.595] prev=Te fuiste dejando y te agarré | next=A pesar de saber que estaba todo mal
+[00:34.845] prev=Te fuiste dejando y te agarré | next=A pesar de saber que estaba todo mal
+[00:35.095] prev=A pesar de saber que estaba todo mal | next=Lo continuamos hasta juntos terminar
+[00:35.344] prev=A pesar de saber que estaba todo mal | next=Lo continuamos hasta juntos terminar
+[00:35.595] prev=A pesar de saber que estaba todo mal | next=Lo continuamos hasta juntos terminar
+[00:35.845] prev=A pesar de saber que estaba todo mal | next=Lo continuamos hasta juntos terminar
+[00:36.094] prev=A pesar de saber que estaba todo mal | next=Lo continuamos hasta juntos terminar
+[00:36.345] prev=A pesar de saber que estaba todo mal | next=Lo continuamos hasta juntos terminar
+[00:36.594] prev=A pesar de saber que estaba todo mal | next=Lo continuamos hasta juntos terminar
+[00:36.844] prev=A pesar de saber que estaba todo mal | next=Lo continuamos hasta juntos terminar
+[00:37.094] prev=A pesar de saber que estaba todo mal | next=Lo continuamos hasta juntos terminar
+[00:37.344] prev=A pesar de saber que estaba todo mal | next=Lo continuamos hasta juntos terminar
+[00:37.595] prev=A pesar de saber que estaba todo mal | next=Lo continuamos hasta juntos terminar
+[00:37.845] prev=A pesar de saber que estaba todo mal | next=Lo continuamos hasta juntos terminar
+[00:38.094] prev=Lo continuamos hasta juntos terminar | next=Cuando caímos en lo que estaba pasando
+[00:38.344] prev=Lo continuamos hasta juntos terminar | next=Cuando caímos en lo que estaba pasando
+[00:38.595] prev=Lo continuamos hasta juntos terminar | next=Cuando caímos en lo que estaba pasando
+[00:38.845] prev=Lo continuamos hasta juntos terminar | next=Cuando caímos en lo que estaba pasando
+[00:39.094] prev=Lo continuamos hasta juntos terminar | next=Cuando caímos en lo que estaba pasando
+[00:39.344] prev=Lo continuamos hasta juntos terminar | next=Cuando caímos en lo que estaba pasando
+[00:39.595] prev=Lo continuamos hasta juntos terminar | next=Cuando caímos en lo que estaba pasando
+[00:39.846] prev=Lo continuamos hasta juntos terminar | next=Cuando caímos en lo que estaba pasando
+[00:40.095] prev=Cuando caímos en lo que estaba pasando | next=Te seguí besando y fue...
+[00:40.345] prev=Cuando caímos en lo que estaba pasando | next=Te seguí besando y fue...
+[00:40.595] prev=Cuando caímos en lo que estaba pasando | next=Te seguí besando y fue...
+[00:40.844] prev=Cuando caímos en lo que estaba pasando | next=Te seguí besando y fue...
+[00:41.094] prev=Cuando caímos en lo que estaba pasando | next=Te seguí besando y fue...
+[00:41.345] prev=Cuando caímos en lo que estaba pasando | next=Te seguí besando y fue...
+[00:41.594] prev=Cuando caímos en lo que estaba pasando | next=Te seguí besando y fue...
+[00:41.844] prev=Cuando caímos en lo que estaba pasando | next=Te seguí besando y fue...
+[00:42.094] prev=Cuando caímos en lo que estaba pasando | next=Te seguí besando y fue...
+[00:42.344] prev=Cuando caímos en lo que estaba pasando | next=Te seguí besando y fue...
+[00:42.595] prev=Cuando caímos en lo que estaba pasando | next=Te seguí besando y fue...
+[00:42.844] prev=Cuando caímos en lo que estaba pasando | next=Te seguí besando y fue...
+[00:43.094] prev=Te seguí besando y fue... | next=Solo tú, no necesito más
+[00:43.344] prev=Te seguí besando y fue... | next=Solo tú, no necesito más
+[00:43.595] prev=Te seguí besando y fue... | next=Solo tú, no necesito más
+[00:43.845] prev=Te seguí besando y fue... | next=Solo tú, no necesito más
+[00:44.095] prev=Te seguí besando y fue... | next=Solo tú, no necesito más
+[00:44.344] prev=Te seguí besando y fue... | next=Solo tú, no necesito más
+[00:44.594] prev=Te seguí besando y fue... | next=Solo tú, no necesito más
+[00:44.845] prev=Te seguí besando y fue... | next=Solo tú, no necesito más
+[00:45.095] prev=Solo tú, no necesito más | next=Te adoraría lo que dure la eternidad
+[00:45.345] prev=Solo tú, no necesito más | next=Te adoraría lo que dure la eternidad
+[00:45.604] prev=Solo tú, no necesito más | next=Te adoraría lo que dure la eternidad
+[00:45.845] prev=Solo tú, no necesito más | next=Te adoraría lo que dure la eternidad
+[00:46.094] prev=Solo tú, no necesito más | next=Te adoraría lo que dure la eternidad
+[00:46.345] prev=Solo tú, no necesito más | next=Te adoraría lo que dure la eternidad
+[00:46.595] prev=Solo tú, no necesito más | next=Te adoraría lo que dure la eternidad
+[00:46.844] prev=Solo tú, no necesito más | next=Te adoraría lo que dure la eternidad
+[00:47.094] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[00:47.345] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[00:47.594] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[00:47.844] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[00:48.095] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[00:48.345] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[00:48.596] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[00:48.846] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[00:49.094] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[00:49.344] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[00:49.594] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[00:49.844] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[00:50.094] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[00:50.344] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[00:50.595] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[00:50.845] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[00:51.094] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[00:51.344] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[00:51.595] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[00:51.844] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[00:52.095] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[00:52.344] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[00:52.595] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[00:52.845] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[00:53.096] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[00:53.345] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[00:53.595] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[00:53.845] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[00:54.094] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[00:54.345] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[00:54.594] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[00:54.844] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[00:55.095] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[00:55.344] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[00:55.594] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[00:55.845] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[00:56.094] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[00:56.344] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[00:56.594] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[00:56.846] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[00:57.095] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[00:57.344] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[00:57.594] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[00:57.844] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[00:58.095] prev=¿Cómo fue que de papel cambié? | next=Eras mi amiga y ahora eres mi mujer
+[00:58.344] prev=¿Cómo fue que de papel cambié? | next=Eras mi amiga y ahora eres mi mujer
+[00:58.595] prev=¿Cómo fue que de papel cambié? | next=Eras mi amiga y ahora eres mi mujer
+[00:58.845] prev=¿Cómo fue que de papel cambié? | next=Eras mi amiga y ahora eres mi mujer
+[00:59.095] prev=¿Cómo fue que de papel cambié? | next=Eras mi amiga y ahora eres mi mujer
+[00:59.344] prev=¿Cómo fue que de papel cambié? | next=Eras mi amiga y ahora eres mi mujer
+[00:59.594] prev=¿Cómo fue que de papel cambié? | next=Eras mi amiga y ahora eres mi mujer
+[00:59.844] prev=¿Cómo fue que de papel cambié? | next=Eras mi amiga y ahora eres mi mujer
+[01:00.094] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[01:00.344] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[01:00.594] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[01:00.845] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[01:01.095] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[01:01.344] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[01:01.594] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[01:01.844] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[01:02.094] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[01:02.344] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[01:02.594] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[01:02.845] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[01:03.095] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[01:03.344] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[01:03.594] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[01:03.844] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[01:04.095] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[01:04.344] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[01:04.594] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[01:04.845] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[01:05.095] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[01:05.345] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[01:05.595] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[01:05.845] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[01:06.095] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[01:06.345] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[01:06.594] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[01:06.844] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[01:07.095] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:07.344] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:07.595] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:07.844] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:08.097] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:08.345] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:08.594] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:08.845] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:09.095] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:09.344] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:09.594] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:09.845] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:10.095] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:10.344] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:10.595] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:10.844] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:11.095] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:11.345] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:11.595] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:11.845] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:12.095] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:12.344] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:12.594] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:12.844] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:13.094] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:13.345] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:13.595] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:13.844] prev=Lo que yo siempre soñé | next=El tiempo que pasó
+[01:14.094] prev=El tiempo que pasó | next=Resultó aún mejor
+[01:14.365] prev=El tiempo que pasó | next=Resultó aún mejor
+[01:14.613] prev=El tiempo que pasó | next=Resultó aún mejor
+[01:14.845] prev=El tiempo que pasó | next=Resultó aún mejor
+[01:15.095] prev=El tiempo que pasó | next=Resultó aún mejor
+[01:15.344] prev=El tiempo que pasó | next=Resultó aún mejor
+[01:15.594] prev=El tiempo que pasó | next=Resultó aún mejor
+[01:15.845] prev=El tiempo que pasó | next=Resultó aún mejor
+[01:16.095] prev=Resultó aún mejor | next=Nos conocíamos de antes y sabíamos
+[01:16.344] prev=Resultó aún mejor | next=Nos conocíamos de antes y sabíamos
+[01:16.595] prev=Resultó aún mejor | next=Nos conocíamos de antes y sabíamos
+[01:16.845] prev=Resultó aún mejor | next=Nos conocíamos de antes y sabíamos
+[01:17.095] prev=Resultó aún mejor | next=Nos conocíamos de antes y sabíamos
+[01:17.344] prev=Resultó aún mejor | next=Nos conocíamos de antes y sabíamos
+[01:17.594] prev=Resultó aún mejor | next=Nos conocíamos de antes y sabíamos
+[01:17.844] prev=Resultó aún mejor | next=Nos conocíamos de antes y sabíamos
+[01:18.095] prev=Resultó aún mejor | next=Nos conocíamos de antes y sabíamos
+[01:18.345] prev=Resultó aún mejor | next=Nos conocíamos de antes y sabíamos
+[01:18.595] prev=Resultó aún mejor | next=Nos conocíamos de antes y sabíamos
+[01:18.844] prev=Resultó aún mejor | next=Nos conocíamos de antes y sabíamos
+[01:19.111] prev=Nos conocíamos de antes y sabíamos | next=Lo que queríamos los dos
+[01:19.345] prev=Nos conocíamos de antes y sabíamos | next=Lo que queríamos los dos
+[01:19.595] prev=Nos conocíamos de antes y sabíamos | next=Lo que queríamos los dos
+[01:19.844] prev=Nos conocíamos de antes y sabíamos | next=Lo que queríamos los dos
+[01:20.094] prev=Nos conocíamos de antes y sabíamos | next=Lo que queríamos los dos
+[01:20.345] prev=Nos conocíamos de antes y sabíamos | next=Lo que queríamos los dos
+[01:20.594] prev=Nos conocíamos de antes y sabíamos | next=Lo que queríamos los dos
+[01:20.844] prev=Nos conocíamos de antes y sabíamos | next=Lo que queríamos los dos
+[01:21.095] prev=Lo que queríamos los dos | next=Entonces el amor
+[01:21.345] prev=Lo que queríamos los dos | next=Entonces el amor
+[01:21.595] prev=Lo que queríamos los dos | next=Entonces el amor
+[01:21.844] prev=Lo que queríamos los dos | next=Entonces el amor
+[01:22.094] prev=Lo que queríamos los dos | next=Entonces el amor
+[01:22.344] prev=Lo que queríamos los dos | next=Entonces el amor
+[01:22.595] prev=Lo que queríamos los dos | next=Entonces el amor
+[01:22.846] prev=Lo que queríamos los dos | next=Entonces el amor
+[01:23.094] prev=Lo que queríamos los dos | next=Entonces el amor
+[01:23.344] prev=Lo que queríamos los dos | next=Entonces el amor
+[01:23.594] prev=Lo que queríamos los dos | next=Entonces el amor
+[01:23.844] prev=Lo que queríamos los dos | next=Entonces el amor
+[01:24.095] prev=Entonces el amor | next=Nos tiene de rehén
+[01:24.344] prev=Entonces el amor | next=Nos tiene de rehén
+[01:24.594] prev=Entonces el amor | next=Nos tiene de rehén
+[01:24.906] prev=Entonces el amor | next=Nos tiene de rehén
+[01:25.095] prev=Entonces el amor | next=Nos tiene de rehén
+[01:25.345] prev=Entonces el amor | next=Nos tiene de rehén
+[01:25.595] prev=Entonces el amor | next=Nos tiene de rehén
+[01:25.845] prev=Entonces el amor | next=Nos tiene de rehén
+[01:26.094] prev=Entonces el amor | next=Nos tiene de rehén
+[01:26.344] prev=Entonces el amor | next=Nos tiene de rehén
+[01:26.595] prev=Entonces el amor | next=Nos tiene de rehén
+[01:26.845] prev=Entonces el amor | next=Nos tiene de rehén
+[01:27.095] prev=Entonces el amor | next=Nos tiene de rehén
+[01:27.344] prev=Entonces el amor | next=Nos tiene de rehén
+[01:27.594] prev=Entonces el amor | next=Nos tiene de rehén
+[01:27.844] prev=Entonces el amor | next=Nos tiene de rehén
+[01:28.094] prev=Nos tiene de rehén | next=Seré tu eterna enamorada y te aseguro que
+[01:28.344] prev=Nos tiene de rehén | next=Seré tu eterna enamorada y te aseguro que
+[01:28.594] prev=Nos tiene de rehén | next=Seré tu eterna enamorada y te aseguro que
+[01:28.845] prev=Nos tiene de rehén | next=Seré tu eterna enamorada y te aseguro que
+[01:29.095] prev=Nos tiene de rehén | next=Seré tu eterna enamorada y te aseguro que
+[01:29.345] prev=Nos tiene de rehén | next=Seré tu eterna enamorada y te aseguro que
+[01:29.594] prev=Nos tiene de rehén | next=Seré tu eterna enamorada y te aseguro que
+[01:29.844] prev=Nos tiene de rehén | next=Seré tu eterna enamorada y te aseguro que
+[01:30.095] prev=Seré tu eterna enamorada y te aseguro que | next=Todas las noches te amaré
+[01:30.345] prev=Seré tu eterna enamorada y te aseguro que | next=Todas las noches te amaré
+[01:30.595] prev=Seré tu eterna enamorada y te aseguro que | next=Todas las noches te amaré
+[01:30.845] prev=Seré tu eterna enamorada y te aseguro que | next=Todas las noches te amaré
+[01:31.095] prev=Seré tu eterna enamorada y te aseguro que | next=Todas las noches te amaré
+[01:31.345] prev=Seré tu eterna enamorada y te aseguro que | next=Todas las noches te amaré
+[01:31.594] prev=Seré tu eterna enamorada y te aseguro que | next=Todas las noches te amaré
+[01:31.845] prev=Seré tu eterna enamorada y te aseguro que | next=Todas las noches te amaré
+[01:32.095] prev=Seré tu eterna enamorada y te aseguro que | next=Todas las noches te amaré
+[01:32.345] prev=Seré tu eterna enamorada y te aseguro que | next=Todas las noches te amaré
+[01:32.594] prev=Seré tu eterna enamorada y te aseguro que | next=Todas las noches te amaré
+[01:32.844] prev=Seré tu eterna enamorada y te aseguro que | next=Todas las noches te amaré
+[01:33.095] prev=Todas las noches te amaré | next=Éramos tan buenos amigos hasta hoy
+[01:33.345] prev=Todas las noches te amaré | next=Éramos tan buenos amigos hasta hoy
+[01:33.594] prev=Todas las noches te amaré | next=Éramos tan buenos amigos hasta hoy
+[01:33.845] prev=Todas las noches te amaré | next=Éramos tan buenos amigos hasta hoy
+[01:34.094] prev=Todas las noches te amaré | next=Éramos tan buenos amigos hasta hoy
+[01:34.345] prev=Todas las noches te amaré | next=Éramos tan buenos amigos hasta hoy
+[01:34.594] prev=Todas las noches te amaré | next=Éramos tan buenos amigos hasta hoy
+[01:34.845] prev=Todas las noches te amaré | next=Éramos tan buenos amigos hasta hoy
+[01:35.094] prev=Todas las noches te amaré | next=Éramos tan buenos amigos hasta hoy
+[01:35.345] prev=Todas las noches te amaré | next=Éramos tan buenos amigos hasta hoy
+[01:35.594] prev=Todas las noches te amaré | next=Éramos tan buenos amigos hasta hoy
+[01:35.845] prev=Todas las noches te amaré | next=Éramos tan buenos amigos hasta hoy
+[01:36.094] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:36.345] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:36.594] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:36.844] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:37.094] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:37.345] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:37.594] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:37.844] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:38.095] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:38.344] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:38.595] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:38.846] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:39.094] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:39.345] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:39.594] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:39.845] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:40.094] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:40.345] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:40.595] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:40.844] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:41.094] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:41.344] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:41.595] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:41.845] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:42.096] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:42.344] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:42.595] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:42.844] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:43.094] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:43.344] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:43.595] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:43.845] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:44.094] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:44.346] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:44.594] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:44.844] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:45.094] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:45.344] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:45.595] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:45.844] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:46.094] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:46.345] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:46.594] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:46.844] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:47.094] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:47.344] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:47.594] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:47.845] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:48.094] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:48.344] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:48.594] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:48.844] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:49.095] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:49.344] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:49.594] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:49.844] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:50.094] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:50.345] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:50.594] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:50.844] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:51.094] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:51.344] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:51.594] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:51.844] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:52.094] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:52.344] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:52.594] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:52.845] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:53.094] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:53.344] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:53.595] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:53.845] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:54.094] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:54.344] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:54.595] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:54.845] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:55.094] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:55.345] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:55.595] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:55.845] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:56.095] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:56.344] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:56.595] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:56.845] prev=Éramos tan buenos amigos hasta hoy | next=Solo tú, no necesito más
+[01:57.094] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[01:57.344] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[01:57.594] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[01:57.845] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[01:58.094] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[01:58.345] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[01:58.595] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[01:58.846] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[01:59.169] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[01:59.345] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[01:59.596] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[01:59.845] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:00.094] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:00.344] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:00.595] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:00.844] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:01.094] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:01.344] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:01.595] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:01.844] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:02.094] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:02.344] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:02.596] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:02.844] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:03.094] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:03.345] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:03.594] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:03.844] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:04.096] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:04.344] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:04.595] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:04.844] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:05.095] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:05.344] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:05.595] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:05.845] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:06.094] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:06.345] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:06.594] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:06.844] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:07.095] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:07.345] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:07.594] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:07.845] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:08.094] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:08.345] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:08.595] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:08.845] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:09.094] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:09.345] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:09.594] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:09.845] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:10.094] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:10.345] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:10.595] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:10.845] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:11.095] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:11.345] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:11.594] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:11.845] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:12.094] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:12.345] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:12.595] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:12.844] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:13.094] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:13.344] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:13.595] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:13.845] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:14.094] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:14.344] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:14.594] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:14.845] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:15.094] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:15.344] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:15.595] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:15.844] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:16.095] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:16.344] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:16.595] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:16.844] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:17.095] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:17.344] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:17.595] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:17.844] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:18.094] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:18.344] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:18.595] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:18.844] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:19.095] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:19.345] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:19.594] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:19.844] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:20.095] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:20.344] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:20.595] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:20.844] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:21.094] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:21.344] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:21.595] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:21.844] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:22.094] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:22.344] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:22.594] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:22.844] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:23.094] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:23.345] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:23.595] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:23.844] prev=Solo tú, no necesito más | next=Solo tú, no necesito más
+[02:24.094] prev=Solo tú, no necesito más | next=Te adoraría lo que dure la eternidad
+[02:24.345] prev=Solo tú, no necesito más | next=Te adoraría lo que dure la eternidad
+[02:24.595] prev=Solo tú, no necesito más | next=Te adoraría lo que dure la eternidad
+[02:24.844] prev=Solo tú, no necesito más | next=Te adoraría lo que dure la eternidad
+[02:25.095] prev=Solo tú, no necesito más | next=Te adoraría lo que dure la eternidad
+[02:25.344] prev=Solo tú, no necesito más | next=Te adoraría lo que dure la eternidad
+[02:25.595] prev=Solo tú, no necesito más | next=Te adoraría lo que dure la eternidad
+[02:25.844] prev=Solo tú, no necesito más | next=Te adoraría lo que dure la eternidad
+[02:26.095] prev=Solo tú, no necesito más | next=Te adoraría lo que dure la eternidad
+[02:26.344] prev=Solo tú, no necesito más | next=Te adoraría lo que dure la eternidad
+[02:26.594] prev=Solo tú, no necesito más | next=Te adoraría lo que dure la eternidad
+[02:26.844] prev=Solo tú, no necesito más | next=Te adoraría lo que dure la eternidad
+[02:27.094] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[02:27.345] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[02:27.594] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[02:27.845] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[02:28.094] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[02:28.344] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[02:28.595] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[02:28.845] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[02:29.094] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[02:29.344] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[02:29.595] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[02:29.845] prev=Te adoraría lo que dure la eternidad | next=Debes ser perfecta para, perfecto para
+[02:30.095] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[02:30.345] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[02:30.594] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[02:30.845] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[02:31.095] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[02:31.344] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[02:31.594] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[02:31.845] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[02:32.095] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[02:32.345] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[02:32.594] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[02:32.844] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[02:33.095] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[02:33.344] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[02:33.595] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[02:33.844] prev=Debes ser perfecta para, perfecto para | next=Perfecta para mí, mi amor
+[02:34.094] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[02:34.344] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[02:34.594] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[02:34.845] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[02:35.094] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[02:35.344] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[02:35.594] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[02:35.846] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[02:36.094] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[02:36.344] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[02:36.594] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[02:36.844] prev=Perfecta para mí, mi amor | next=¿Cómo fue que de papel cambié?
+[02:37.094] prev=¿Cómo fue que de papel cambié? | next=Eras mi amiga y ahora eres mi mujer
+[02:37.345] prev=¿Cómo fue que de papel cambié? | next=Eras mi amiga y ahora eres mi mujer
+[02:37.594] prev=¿Cómo fue que de papel cambié? | next=Eras mi amiga y ahora eres mi mujer
+[02:37.844] prev=¿Cómo fue que de papel cambié? | next=Eras mi amiga y ahora eres mi mujer
+[02:38.094] prev=¿Cómo fue que de papel cambié? | next=Eras mi amiga y ahora eres mi mujer
+[02:38.344] prev=¿Cómo fue que de papel cambié? | next=Eras mi amiga y ahora eres mi mujer
+[02:38.595] prev=¿Cómo fue que de papel cambié? | next=Eras mi amiga y ahora eres mi mujer
+[02:38.845] prev=¿Cómo fue que de papel cambié? | next=Eras mi amiga y ahora eres mi mujer
+[02:39.095] prev=¿Cómo fue que de papel cambié? | next=Eras mi amiga y ahora eres mi mujer
+[02:39.344] prev=¿Cómo fue que de papel cambié? | next=Eras mi amiga y ahora eres mi mujer
+[02:39.595] prev=¿Cómo fue que de papel cambié? | next=Eras mi amiga y ahora eres mi mujer
+[02:39.845] prev=¿Cómo fue que de papel cambié? | next=Eras mi amiga y ahora eres mi mujer
+[02:40.094] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[02:40.344] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[02:40.594] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[02:40.844] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[02:41.094] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[02:41.344] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[02:41.594] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[02:41.845] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[02:42.094] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[02:42.344] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[02:42.595] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[02:42.844] prev=Eras mi amiga y ahora eres mi mujer | next=Debes ser perfectamente, exactamente
+[02:43.094] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[02:43.344] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[02:43.595] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[02:43.844] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[02:44.094] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[02:44.344] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[02:44.595] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[02:44.881] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[02:45.094] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[02:45.345] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[02:45.594] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[02:45.845] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[02:46.095] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[02:46.345] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[02:46.595] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[02:46.844] prev=Debes ser perfectamente, exactamente | next=Lo que yo siempre soñé
+[02:47.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:47.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:47.594] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:47.846] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:48.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:48.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:48.594] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:48.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:49.095] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:49.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:49.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:49.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:50.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:50.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:50.594] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:50.846] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:51.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:51.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:51.594] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:51.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:52.095] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:52.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:52.594] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:52.844] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:53.095] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:53.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:53.594] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:53.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:54.095] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:54.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:54.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:54.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:55.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:55.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:55.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:55.844] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:56.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:56.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:56.594] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:56.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:57.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:57.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:57.594] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:57.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:58.095] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:58.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:58.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:58.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:59.096] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:59.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:59.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[02:59.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:00.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:00.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:00.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:00.844] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:01.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:01.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:01.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:01.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:02.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:02.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:02.594] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:02.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:03.095] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:03.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:03.596] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:03.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:04.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:04.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:04.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:04.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:05.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:05.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:05.594] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:05.844] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:06.095] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:06.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:06.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:06.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:07.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:07.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:07.594] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:07.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:08.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:08.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:08.594] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:08.844] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:09.095] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:09.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:09.594] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:09.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:10.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:10.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:10.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:10.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:11.095] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:11.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:11.594] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:11.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:12.095] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:12.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:12.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:12.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:13.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:13.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:13.594] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:13.844] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:14.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:14.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:14.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:14.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:15.095] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:15.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:15.594] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:15.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:16.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:16.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:16.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:16.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:17.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:17.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:17.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:17.844] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:18.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:18.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:18.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:18.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:19.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:19.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:19.594] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:19.844] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:20.095] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:20.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:20.594] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:20.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:21.095] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:21.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:21.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:21.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:22.095] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:22.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:22.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:22.844] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:23.095] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:23.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:23.594] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:23.844] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:24.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:24.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:24.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:24.844] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:25.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:25.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:25.594] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:25.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:26.095] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:26.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:26.594] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:26.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:27.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:27.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:27.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:27.844] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:28.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:28.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:28.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:28.844] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:29.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:29.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:29.594] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:29.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:30.095] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:30.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:30.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:30.844] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:31.095] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:31.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:31.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:31.844] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:32.095] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:32.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:32.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:32.844] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:33.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:33.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:33.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:33.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:34.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:34.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:34.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:34.844] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:35.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:35.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:35.594] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:35.844] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:36.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:36.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:36.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:36.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:37.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:37.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:37.594] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:37.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:38.096] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:38.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:38.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:38.844] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:39.095] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:39.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:39.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:39.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:40.094] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:40.344] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:40.594] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:40.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:41.095] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:41.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:41.595] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:41.845] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:42.095] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:42.345] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:42.485] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:42.485] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:42.485] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:42.485] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:43.457] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:43.643] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:43.892] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:44.142] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:44.210] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:44.210] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:44.235] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:44.235] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:44.235] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé
+[03:44.235] prev=Lo que yo siempre soñé | next=Lo que yo siempre soñé

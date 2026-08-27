@@ -1,0 +1,563 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(180deg, #ffd8e9, #ffe7f1, #fff0f7);
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Quicksand', sans-serif;
+  position: relative;
+  isolation: isolate;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(255,182,193,.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255,192,203,.12) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── UTILITIES ─────────────────────────────── */
+.container {
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: max(20px, env(safe-area-inset-top))
+           max(20px, env(safe-area-inset-right))
+           max(20px, env(safe-area-inset-bottom))
+           max(20px, env(safe-area-inset-left));
+  position: relative;
+  z-index: 5;
+}
+
+.hidden { display: none !important; }
+
+/* ── WELCOME SCREEN ────────────────────────── */
+.letter-card {
+  background: white;
+  width: min(90vw, 380px);
+  border-radius: 35px;
+  padding: 40px;
+  text-align: center;
+  box-shadow:
+    0 20px 50px rgba(255,105,180,.2),
+    0 0 30px rgba(255,192,203,.1);
+  animation: float 4s ease infinite;
+  backdrop-filter: blur(10px);
+}
+
+.letter-card h1 {
+  color: #ff5ca8;
+  margin-bottom: 15px;
+  font-family: 'Pacifico', cursive;
+  font-size: clamp(1.4rem, 5vw, 1.9rem);
+}
+
+.letter-card p {
+  color: #7a5d68;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  border-radius: 999px;
+  padding: 16px 28px;
+  font-size: 18px;
+  background: #ff6fb1;
+  color: white;
+  transition: .3s;
+  font-weight: 700;
+  box-shadow: 0 5px 20px rgba(255,107,177,.4);
+  position: relative;
+  overflow: hidden;
+  min-height: 52px;
+  font-family: 'Quicksand', sans-serif;
+  /* tap highlight en móvil */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: rgba(255,255,255,.3);
+  transition: left .3s;
+}
+button:hover::before { left: 100%; }
+button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 25px rgba(255,107,177,.6);
+}
+button:active { transform: scale(0.97); }
+
+.pusheen-top {
+  width: 170px;
+  margin-bottom: 20px;
+  /* Asegurar que el GIF se muestra bien */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  image-rendering: auto;
+}
+
+/* ── BIG REVEAL OVERLAY ────────────────────── */
+.big-reveal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+  background: rgba(255, 182, 210, 0.15);
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+  animation: revealOverlayIn 0.4s ease forwards;
+}
+
+.big-reveal-overlay.fade-out {
+  animation: revealOverlayOut 0.6s ease forwards;
+}
+
+.big-reveal-img {
+  width: min(75vw, 420px);
+  height: min(75vw, 420px);
+  object-fit: cover;
+  border-radius: 30px;
+  border: 5px solid rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 0 60px rgba(255, 105, 180, 0.7),
+    0 0 120px rgba(255, 105, 180, 0.3),
+    0 30px 60px rgba(0,0,0,.15);
+  animation: bigImgPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  filter: brightness(1.05) saturate(1.1);
+}
+
+.big-reveal-heart {
+  font-size: clamp(2.5rem, 10vw, 4.5rem);
+  margin-top: 20px;
+  animation: heartBounce 0.6s ease 0.3s both;
+  filter: drop-shadow(0 0 20px rgba(255,105,180,.9));
+}
+
+@keyframes revealOverlayIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes revealOverlayOut {
+  from { opacity: 1; transform: scale(1); }
+  to   { opacity: 0; transform: scale(1.05); }
+}
+@keyframes bigImgPop {
+  from { opacity: 0; transform: scale(0.3) rotate(-8deg); }
+  to   { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+@keyframes heartBounce {
+  from { opacity: 0; transform: scale(0) translateY(20px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* ── EXPERIENCE ────────────────────────────── */
+.experience {
+  width: 100%;
+  min-height: 100svh;
+  position: relative;
+  z-index: 10;
+  padding-top: max(16px, env(safe-area-inset-top));
+  padding-bottom: max(16px, env(safe-area-inset-bottom));
+}
+
+.music-badge {
+  text-align: center;
+  margin-bottom: 16px;
+  color: #ff5ca8;
+  font-weight: bold;
+  font-size: 1.1rem;
+  animation: pulse-badge 1.5s ease-in-out infinite;
+}
+
+.debug-actions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.secondary-button {
+  background: rgba(255, 255, 255, 0.9);
+  color: #ff5ca8;
+  border: 1.5px solid rgba(255, 92, 168, 0.28);
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.12);
+  font-size: 0.95rem;
+  padding: 12px 18px;
+  min-height: 44px;
+}
+
+.secondary-button:hover {
+  background: rgba(255, 235, 243, 0.98);
+  color: #e94a95;
+  box-shadow: 0 10px 24px rgba(255, 105, 180, 0.18);
+}
+
+@keyframes pulse-badge {
+  0%, 100% { transform: scale(1);   opacity: .9; }
+  50%       { transform: scale(1.1); opacity: 1;  }
+}
+
+.letter-container {
+  display: flex;
+  justify-content: center;
+  padding: 0 12px;
+}
+
+.letter-paper {
+  background: white;
+  width: min(94vw, 800px);
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow:
+    0 20px 40px rgba(0,0,0,.1),
+    0 0 40px rgba(255,105,180,.15);
+  transition: box-shadow .3s ease;
+  position: relative;
+  z-index: 20;
+  backdrop-filter: blur(5px);
+}
+
+.letter-paper h2 {
+  color: #ff5ca8;
+  margin-bottom: 20px;
+  font-family: 'Pacifico', cursive;
+}
+
+#typewriterText {
+  line-height: 2;
+  color: #666;
+  font-size: 1.1rem;
+  min-height: 200px;
+  max-height: 55svh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  /* Scrollbar bonita */
+  scrollbar-width: thin;
+  scrollbar-color: #ffb3d1 transparent;
+}
+#typewriterText::-webkit-scrollbar { width: 4px; }
+#typewriterText::-webkit-scrollbar-track { background: transparent; }
+#typewriterText::-webkit-scrollbar-thumb { background: #ffb3d1; border-radius: 4px; }
+
+#typewriterText p {
+  margin-bottom: 4px;
+}
+
+.lyric-line {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: lyricReveal .28s ease forwards;
+}
+
+@keyframes lyricReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── FLOATING PUSHEEN DECORATIONS ──────────── */
+.floating-pusheen {
+  position: fixed;
+  width: 110px;
+  z-index: 1;
+  opacity: .7;
+}
+.left  { left: 12px; bottom: 20px; animation: float 5s infinite; }
+.right { right: 12px; top: 50px;   animation: float 4s infinite; }
+
+/* ── FINAL SECTION ─────────────────────────── */
+.final-section {
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.final-card {
+  background: white;
+  border-radius: 40px;
+  padding: 50px;
+  width: min(92vw, 500px);
+  box-shadow:
+    0 20px 50px rgba(0,0,0,.1),
+    0 0 50px rgba(255,105,180,.2);
+  backdrop-filter: blur(10px);
+  animation: float 4s ease infinite;
+}
+
+.final-card h2 {
+  color: #ff5ca8;
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.final-card p {
+  margin: 20px 0;
+  line-height: 2;
+  color: #666;
+}
+
+.final-pusheen { width: 160px; }
+
+/* ── FLOATING HEARTS BG ────────────────────── */
+.floating-hearts::before {
+  content: "💖 💕 💗 💞";
+  position: fixed;
+  top: -10px;
+  width: 100%;
+  text-align: center;
+  animation: hearts 12s linear infinite;
+  opacity: .4;
+  font-size: 1.2rem;
+  letter-spacing: 20px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes hearts {
+  from { transform: translateY(-100px); }
+  to   { transform: translateY(100vh);  }
+}
+
+/* ── SHARED ANIMATIONS ─────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px);  }
+  50%       { transform: translateY(-10px); }
+}
+
+/* ── HEART FIREWORKS ───────────────────────── */
+/* Las partículas ya usan position:fixed directamente en JS */
+@keyframes heartFireworks {
+  0% {
+    opacity: 1;
+    transform: translate(0,0) scale(1);
+    filter: drop-shadow(0 0 15px rgba(255,105,180,1));
+  }
+  50% { opacity: .9; }
+  100% {
+    opacity: 0;
+    transform: translate(var(--vx), var(--vy)) scale(0.2);
+    filter: drop-shadow(0 0 4px rgba(255,105,180,.3));
+  }
+}
+
+.heart-particle {
+  font-size: 2rem;
+  animation: heartFireworks 1.8s cubic-bezier(.25,.46,.45,.94) forwards;
+  filter: drop-shadow(0 0 8px rgba(255,105,180,.8));
+  text-shadow: 0 0 10px rgba(255,105,180,.6);
+  will-change: transform, opacity;
+  /* position y left/top se asignan en JS */
+}
+
+/* ── LETTER BEAT ───────────────────────────── */
+@keyframes letterBeat {
+  0%,100% { transform: scale(1);    }
+  25%      { transform: scale(1.02); }
+  50%      { transform: scale(1.04); }
+  75%      { transform: scale(1.02); }
+}
+
+.letter-beat {
+  animation: letterBeat 0.5s ease-in-out !important;
+  box-shadow:
+    0 20px 40px rgba(255,105,180,.3),
+    0 0 30px rgba(255,105,180,.25) !important;
+}
+
+/* ── FLOATING IMAGES ───────────────────────── */
+@keyframes floatImage {
+  0%   { opacity: 0; transform: translateY(105vh) scale(.5) rotate(-15deg); }
+  8%   { opacity: 1; }
+  92%  { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-110vh) scale(.6) rotate(345deg); }
+}
+
+.floating-image-wrapper {
+  position: fixed;
+  width: 110px;
+  height: 110px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow:
+    0 10px 30px rgba(255,105,180,.4),
+    0 0 20px rgba(255,192,203,.3),
+    inset 0 0 20px rgba(255,255,255,.5);
+  z-index: 15;
+  left: var(--left);
+  bottom: 0;
+  animation: floatImage var(--duration) linear var(--delay) forwards;
+  filter: brightness(1.08) drop-shadow(0 0 12px rgba(255,105,180,.5));
+  border: 3px solid rgba(255,255,255,.85);
+  pointer-events: none;
+}
+
+.floating-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── RESPONSIVE: tablet ────────────────────── */
+@media (max-width: 900px) {
+  .container {
+    padding-top: max(18px, env(safe-area-inset-top));
+    padding-bottom: max(18px, env(safe-area-inset-bottom));
+  }
+  .letter-card {
+    width: min(92vw, 460px);
+    padding: 28px 22px;
+    border-radius: 28px;
+  }
+  .pusheen-top { width: 140px; }
+  .letter-paper {
+    padding: 28px 22px;
+    border-radius: 24px;
+  }
+  #typewriterText {
+    font-size: 1rem;
+    line-height: 1.9;
+  }
+  .floating-pusheen { width: 84px; }
+  .final-card { padding: 32px 22px; }
+  .final-pusheen { width: 140px; }
+  .floating-image-wrapper { width: 88px; height: 88px; }
+}
+
+/* ── RESPONSIVE: mobile (iPhone/Samsung grandes) ── */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+    align-items: flex-start;
+    padding-top: max(24px, env(safe-area-inset-top));
+  }
+
+  /* Pantalla bienvenida centrada verticalmente */
+  #welcomeScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: max(30px, env(safe-area-inset-top));
+  }
+
+  .letter-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 24px 18px;
+    border-radius: 26px;
+  }
+
+  .letter-card h1 {
+    font-size: clamp(1.3rem, 6vw, 1.7rem);
+  }
+
+  .pusheen-top { width: 130px; }
+
+  button {
+    width: 100%;
+    max-width: 100%;
+    font-size: 17px;
+    padding: 15px 20px;
+  }
+
+  /* Experience */
+  .experience {
+    padding: max(16px, env(safe-area-inset-top)) 0 max(16px, env(safe-area-inset-bottom));
+  }
+
+  .music-badge {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    padding: 0 12px;
+  }
+
+  .letter-container {
+    padding: 0 6px;
+  }
+
+  .letter-paper {
+    width: 100%;
+    padding: 22px 16px;
+    border-radius: 22px;
+  }
+
+  .letter-paper h2 {
+    font-size: 1.1rem;
+    margin-bottom: 14px;
+  }
+
+  .secondary-button {
+    width: 100%;
+    max-width: 240px;
+    font-size: 0.9rem;
+    padding: 11px 16px;
+  }
+
+  #typewriterText {
+    font-size: 0.97rem;
+    line-height: 1.85;
+    min-height: 160px;
+    max-height: 52svh;
+  }
+
+  .floating-pusheen {
+    width: 64px;
+    opacity: .55;
+  }
+  .right { top: max(70px, env(safe-area-inset-top) + 50px); }
+
+  /* Final */
+  .final-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 26px 18px;
+    border-radius: 28px;
+  }
+
+  .final-pusheen { width: 120px; }
+
+  .floating-image-wrapper {
+    width: 68px;
+    height: 68px;
+    border-radius: 14px;
+  }
+
+  /* Big reveal image en móvil */
+  .big-reveal-img {
+    width: min(80vw, 320px);
+    height: min(80vw, 320px);
+    border-radius: 22px;
+  }
+}
+
+/* ── RESPONSIVE: pantallas muy altas (Pro Max, Ultra) ── */
+@media (min-height: 900px) and (max-width: 480px) {
+  #typewriterText {
+    max-height: 58svh;
+  }
+  .letter-paper {
+    padding: 28px 20px;
+  }
+}

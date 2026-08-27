@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para ti ♡</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="sparkles"></div>
+
+  <div class="floating-hearts"></div>
+
+  <main class="container">
+
+    <section class="welcome-screen" id="welcomeScreen">
+
+      <img src="assets/pusheen-love.gif"
+           class="pusheen-top"
+           alt="pusheen">
+
+      <div class="letter-card">
+
+        <h1>Una cartita para tiii	 ♡</h1>
+
+        <p>
+          Tengo algo bonito que quiero compartir contigo...
+        </p>
+
+        <button id="playBtn">
+          Reprodúceme ♡
+        </button>
+
+      </div>
+    </section>
+
+
+    <section class="experience hidden" id="experience">
+
+      <div class="music-badge">
+        🎵 Sonando algo especial...
+      </div>
+
+      <img src="assets/descarga.png"
+           class="floating-pusheen left"
+           alt="">
+
+      <img src="assets/descarga1.png"
+           class="floating-pusheen right"
+           alt="">
+
+      <div class="letter-container">
+
+        <div class="letter-paper">
+
+          <h2>💌 Para ti</h2>
+
+          <div id="typewriterText"></div>
+
+        </div>
+      </div>
+
+    </section>
+
+    <section id="finalSection" class="final-section hidden">
+
+      <div class="final-card">
+
+        <img src="assets/pusheen1.gif" class="final-pusheen">
+
+        <h2>♡</h2>
+
+        <p>
+          No sé si exista algo realmente perfecto...
+          <br><br>
+          pero hay personas que hacen que ciertos momentos
+          se sientan así.
+          <br><br>
+          Gracias por existir un ratito en este mundo
+          y estar a mi lado. 💌
+        </p>
+
+        <button onclick="location.reload()">
+          Escucharlo otra vez ♡
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <audio id="song">
+    <source src="assets/Miranda - Perfecta (letra).mp3" type="audio/mp3">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
