@@ -1,5 +1,8 @@
-const playBtn = document.getElementById("playBtn");
-const song = document.getElementById("song");
+const playBtn =
+  document.getElementById("playBtn");
+
+const song =
+  document.getElementById("song");
 
 const welcomeScreen =
   document.getElementById("welcomeScreen");
@@ -11,17 +14,25 @@ const finalSection =
   document.getElementById("finalSection");
 
 const letterParagraphs = [
-  ...document.querySelectorAll(".letter-paragraph")
+  ...document.querySelectorAll(
+    ".letter-paragraph"
+  )
 ];
 
 const readingHint =
-  document.getElementById("readingHint");
+  document.getElementById(
+    "readingHint"
+  );
 
 const yesButton =
-  document.getElementById("yesButton");
+  document.getElementById(
+    "yesButton"
+  );
 
 const hugButton =
-  document.getElementById("hugButton");
+  document.getElementById(
+    "hugButton"
+  );
 
 
 /* =========================================
@@ -31,43 +42,40 @@ const hugButton =
 /*
  * Velocidad de lectura.
  *
- * Antes:
- * 190 palabras/minuto
- *
- * Ahora:
- * 380 palabras/minuto
- *
- * Esto hace que la lectura automática sea
+ * La versión anterior utilizaba 190.
+ * Ahora utilizamos 380 para que sea
  * aproximadamente el doble de rápida.
  */
+
 const WORDS_PER_MINUTE = 380;
 
 
 /*
- * Tiempo adicional después de calcular
- * la lectura de cada párrafo.
+ * Tiempo adicional por párrafo.
  */
+
 const EXTRA_READING_TIME = 1200;
 
 
 /*
- * Tiempo mínimo que permanecerá visible
- * cada párrafo.
+ * Tiempo mínimo por párrafo.
  */
+
 const MIN_PARAGRAPH_TIME = 2200;
 
 
 /*
- * Pausa después de terminar la carta
- * antes de comenzar el auto-scroll.
+ * Tiempo después de terminar la carta
+ * antes de iniciar el auto-scroll.
  */
+
 const BEFORE_SCROLL_DELAY = 1800;
 
 
 /*
- * Duración del desplazamiento automático
- * hacia la pregunta final.
+ * Duración del desplazamiento automático.
  */
+
 const AUTO_SCROLL_DURATION = 5500;
 
 
@@ -77,114 +85,133 @@ const AUTO_SCROLL_DURATION = 5500;
 
 let started = false;
 
-/*
- * Se vuelve true cuando ella empieza
- * a deslizar manualmente.
- */
 let userScrolled = false;
 
-/*
- * Indica si actualmente estamos haciendo
- * auto-scroll.
- */
 let autoScrolling = false;
 
 
 /* =========================================
-   UTILIDADES
+   UTILIDAD
 ========================================= */
 
 function wait(ms) {
-  return new Promise(resolve => {
-    setTimeout(resolve, ms);
-  });
+
+  return new Promise(
+    resolve => {
+      setTimeout(
+        resolve,
+        ms
+      );
+    }
+  );
+
 }
 
 
 /* =========================================
-   INICIAR EXPERIENCIA
+   INICIAR CARTA
 ========================================= */
 
-playBtn.addEventListener("click", async () => {
+playBtn.addEventListener(
+  "click",
+  async () => {
 
-  if (started) {
-    return;
-  }
+    /*
+     * Evita iniciar dos veces.
+     */
 
-  started = true;
+    if (started) {
+      return;
+    }
 
-  playBtn.disabled = true;
+    started = true;
+
+    playBtn.disabled = true;
 
 
-  /*
-   * El navegador permite reproducir audio
-   * porque esto ocurre directamente después
-   * del toque/click de la persona.
-   */
+    /*
+     * Inicia la canción.
+     *
+     * Al ocurrir después del click,
+     * los navegadores móviles permiten
+     * normalmente la reproducción.
+     */
 
-  try {
+    try {
 
-    song.currentTime = 0;
+      song.currentTime = 0;
 
-    await song.play();
+      await song.play();
 
-  } catch (error) {
+    } catch (error) {
 
-    console.warn(
-      "No se pudo iniciar la canción:",
-      error
+      console.warn(
+        "No se pudo iniciar la canción:",
+        error
+      );
+
+    }
+
+
+    /*
+     * Cambiamos de la portada
+     * a la carta.
+     */
+
+    welcomeScreen.classList.add(
+      "hidden"
     );
 
+    experience.classList.remove(
+      "hidden"
+    );
+
+
+    /*
+     * Nos aseguramos de empezar
+     * arriba de todo.
+     */
+
+    window.scrollTo({
+      top: 0,
+      behavior: "instant"
+    });
+
+
+    /*
+     * Comienza la carta.
+     */
+
+    await revealLetter();
+
   }
-
-
-  /*
-   * Ocultamos la pantalla inicial.
-   */
-
-  welcomeScreen.classList.add("hidden");
-
-  experience.classList.remove("hidden");
-
-
-  /*
-   * Regresamos al principio de la carta.
-   */
-
-  window.scrollTo({
-    top: 0,
-    behavior: "instant"
-  });
-
-
-  /*
-   * Comenzamos la lectura.
-   */
-
-  await revealLetter();
-
-});
+);
 
 
 /* =========================================
-   REVELAR CARTA
+   MOSTRAR CARTA
 ========================================= */
 
 async function revealLetter() {
 
   /*
-   * Primero ocultamos todos los párrafos.
+   * Ocultamos inicialmente todos
+   * los párrafos.
    */
 
-  letterParagraphs.forEach(paragraph => {
+  letterParagraphs.forEach(
+    paragraph => {
 
-    paragraph.classList.remove("visible");
+      paragraph.classList.remove(
+        "visible"
+      );
 
-  });
+    }
+  );
 
 
   /*
-   * Vamos mostrando cada párrafo.
+   * Recorremos cada párrafo.
    */
 
   for (
@@ -198,8 +225,7 @@ async function revealLetter() {
 
 
     /*
-     * Contamos aproximadamente cuántas
-     * palabras tiene el párrafo.
+     * Contamos las palabras.
      */
 
     const words =
@@ -211,25 +237,28 @@ async function revealLetter() {
 
 
     /*
-     * Calculamos el tiempo de lectura.
-     *
-     * 380 palabras/minuto hace que avance
-     * aproximadamente al doble de velocidad
-     * respecto a la versión anterior.
+     * Calculamos el tiempo
+     * aproximado de lectura.
      */
 
     const calculatedTime =
-      (words / WORDS_PER_MINUTE) * 60000;
+      (
+        words /
+        WORDS_PER_MINUTE
+      ) * 60000;
 
 
     /*
-     * Agregamos un pequeño margen.
+     * Tiempo final.
+     *
+     * Nunca será menor a 2.2 segundos.
      */
 
     const readingTime =
       Math.max(
         MIN_PARAGRAPH_TIME,
-        calculatedTime + EXTRA_READING_TIME
+        calculatedTime +
+        EXTRA_READING_TIME
       );
 
 
@@ -237,7 +266,9 @@ async function revealLetter() {
      * Mostramos el párrafo.
      */
 
-    paragraph.classList.add("visible");
+    paragraph.classList.add(
+      "visible"
+    );
 
 
     /*
@@ -245,25 +276,32 @@ async function revealLetter() {
      */
 
     createHeartBurst(
-      window.innerWidth * (
-        0.35 +
-        Math.random() * 0.3
-      ),
-      window.innerHeight * (
-        0.25 +
-        Math.random() * 0.35
-      ),
-      i === letterParagraphs.length - 1
+
+      window.innerWidth *
+        (
+          0.35 +
+          Math.random() * 0.3
+        ),
+
+      window.innerHeight *
+        (
+          0.25 +
+          Math.random() * 0.35
+        ),
+
+      i ===
+        letterParagraphs.length - 1
         ? 8
         : 2
+
     );
 
 
     /*
      * Esperamos el tiempo calculado.
      *
-     * Si ella ya empezó a deslizar,
-     * dejamos de imponer el ritmo.
+     * Si ella comenzó a deslizar,
+     * dejamos de controlar el ritmo.
      */
 
     if (userScrolled) {
@@ -272,7 +310,9 @@ async function revealLetter() {
 
     } else {
 
-      await wait(readingTime);
+      await wait(
+        readingTime
+      );
 
     }
 
@@ -280,14 +320,16 @@ async function revealLetter() {
 
 
   /*
-   * Ya terminó la carta.
+   * Terminó la carta.
    */
 
-  readingHint.classList.remove("hidden");
+  readingHint.classList.remove(
+    "hidden"
+  );
 
 
   /*
-   * Si ella estuvo deslizando manualmente,
+   * Si ella ya está deslizando,
    * no hacemos auto-scroll.
    */
 
@@ -297,16 +339,16 @@ async function revealLetter() {
 
 
   /*
-   * Pequeña pausa antes de llevarla
-   * a la pregunta.
+   * Pequeña pausa.
    */
 
-  await wait(BEFORE_SCROLL_DELAY);
+  await wait(
+    BEFORE_SCROLL_DELAY
+  );
 
 
   /*
-   * Volvemos a comprobar por si deslizó
-   * durante la espera.
+   * Comprobamos otra vez.
    */
 
   if (userScrolled) {
@@ -315,7 +357,7 @@ async function revealLetter() {
 
 
   /*
-   * Comenzamos el desplazamiento automático.
+   * Desplazamos hacia la pregunta.
    */
 
   autoScrollToQuestion();
@@ -324,14 +366,13 @@ async function revealLetter() {
 
 
 /* =========================================
-   AUTO SCROLL
+   AUTO-SCROLL
 ========================================= */
 
 function autoScrollToQuestion() {
 
   /*
-   * Seguridad:
-   * si ella ya está controlando la página,
+   * Si ya deslizó manualmente,
    * no hacemos nada.
    */
 
@@ -354,7 +395,7 @@ function autoScrollToQuestion() {
 
 
   /*
-   * Calculamos dónde está la pregunta.
+   * Posición final.
    */
 
   const targetPosition =
@@ -364,18 +405,21 @@ function autoScrollToQuestion() {
 
 
   const distance =
-    targetPosition - startPosition;
+    targetPosition -
+    startPosition;
 
 
   const startTime =
     performance.now();
 
 
-  function animate(currentTime) {
+  function animate(
+    currentTime
+  ) {
 
     /*
-     * Si ella toca/desliza la pantalla,
-     * detenemos inmediatamente el movimiento.
+     * Si toca la pantalla,
+     * detenemos inmediatamente.
      */
 
     if (userScrolled) {
@@ -383,32 +427,35 @@ function autoScrollToQuestion() {
       autoScrolling = false;
 
       return;
-
     }
 
 
     const elapsed =
-      currentTime - startTime;
+      currentTime -
+      startTime;
 
 
     const progress =
       Math.min(
-        elapsed / AUTO_SCROLL_DURATION,
+        elapsed /
+          AUTO_SCROLL_DURATION,
         1
       );
 
 
     /*
-     * Easing suave:
+     * Movimiento suave:
      *
-     * empieza despacio,
-     * acelera en medio,
-     * termina despacio.
+     * lento → rápido → lento
      */
 
     const eased =
       progress < 0.5
-        ? 2 * progress * progress
+
+        ? 2 *
+          progress *
+          progress
+
         : 1 -
           Math.pow(
             -2 * progress + 2,
@@ -428,7 +475,7 @@ function autoScrollToQuestion() {
 
 
     /*
-     * Continuamos hasta llegar al final.
+     * Continuamos.
      */
 
     if (progress < 1) {
@@ -446,30 +493,22 @@ function autoScrollToQuestion() {
   }
 
 
-  requestAnimationFrame(animate);
+  requestAnimationFrame(
+    animate
+  );
 
 }
 
 
 /* =========================================
-   DETECTAR INTERACCIÓN MANUAL
+   DETECTAR SCROLL MANUAL
 ========================================= */
 
 /*
- * No usamos solamente el evento "scroll"
- * porque el auto-scroll también genera
- * eventos de scroll.
+ * TOUCHSTART
  *
- * En cambio detectamos directamente cuando
- * la persona toca o mueve la pantalla.
- */
-
-
-/*
- * TOUCH START
- *
- * En móvil, apenas toca la pantalla,
- * cancelamos el auto-scroll.
+ * En móvil, si toca la pantalla mientras
+ * hacemos auto-scroll, cancelamos.
  */
 
 window.addEventListener(
@@ -477,7 +516,9 @@ window.addEventListener(
   () => {
 
     if (autoScrolling) {
+
       userScrolled = true;
+
     }
 
   },
@@ -488,10 +529,10 @@ window.addEventListener(
 
 
 /*
- * TOUCH MOVE
+ * TOUCHMOVE
  *
- * Si empieza a arrastrar la página,
- * el control pasa completamente a ella.
+ * Si empieza a arrastrar,
+ * el control pasa a ella.
  */
 
 window.addEventListener(
@@ -499,7 +540,9 @@ window.addEventListener(
   () => {
 
     if (autoScrolling) {
+
       userScrolled = true;
+
     }
 
   },
@@ -511,9 +554,6 @@ window.addEventListener(
 
 /*
  * MOUSE WHEEL
- *
- * También funciona si abre la página
- * desde computadora.
  */
 
 window.addEventListener(
@@ -521,7 +561,9 @@ window.addEventListener(
   () => {
 
     if (autoScrolling) {
+
       userScrolled = true;
+
     }
 
   },
@@ -534,7 +576,7 @@ window.addEventListener(
 /*
  * TECLADO
  *
- * Por si abre la página desde PC.
+ * Para computadora.
  */
 
 window.addEventListener(
@@ -542,6 +584,7 @@ window.addEventListener(
   event => {
 
     const scrollKeys = [
+
       "ArrowDown",
       "ArrowUp",
       "PageDown",
@@ -549,11 +592,14 @@ window.addEventListener(
       "Home",
       "End",
       " "
+
     ];
 
 
     if (
-      scrollKeys.includes(event.key)
+      scrollKeys.includes(
+        event.key
+      )
     ) {
 
       userScrolled = true;
@@ -565,7 +611,7 @@ window.addEventListener(
 
 
 /* =========================================
-   BOTÓN "SÍ"
+   BOTÓN SÍ
 ========================================= */
 
 yesButton.addEventListener(
@@ -574,11 +620,6 @@ yesButton.addEventListener(
 );
 
 
-/*
- * El botón de abrazo también lleva
- * al final feliz.
- */
-
 hugButton.addEventListener(
   "click",
   acceptProposal
@@ -586,7 +627,7 @@ hugButton.addEventListener(
 
 
 /* =========================================
-   ACEPTAR
+   ACEPTAR PROPUESTA
 ========================================= */
 
 async function acceptProposal() {
@@ -601,13 +642,17 @@ async function acceptProposal() {
 
 
   /*
-   * Primera explosión de corazones.
+   * Explosión inicial.
    */
 
   createHeartBurst(
+
     window.innerWidth / 2,
+
     window.innerHeight * 0.45,
+
     30
+
   );
 
 
@@ -615,21 +660,25 @@ async function acceptProposal() {
 
 
   /*
-   * Ocultamos la carta.
+   * Ocultamos la experiencia.
    */
 
-  experience.classList.add("hidden");
+  experience.classList.add(
+    "hidden"
+  );
 
 
   /*
-   * Mostramos el mensaje final.
+   * Mostramos el final.
    */
 
-  finalSection.classList.remove("hidden");
+  finalSection.classList.remove(
+    "hidden"
+  );
 
 
   /*
-   * Regresamos arriba.
+   * Volvemos arriba.
    */
 
   window.scrollTo({
@@ -642,18 +691,22 @@ async function acceptProposal() {
 
 
   /*
-   * Segunda explosión de corazones.
+   * Segunda explosión.
    */
 
   createHeartBurst(
+
     window.innerWidth / 2,
+
     window.innerHeight * 0.4,
+
     40
+
   );
 
 
   /*
-   * Guardamos la respuesta localmente.
+   * Guardamos la respuesta.
    */
 
   try {
@@ -675,7 +728,7 @@ async function acceptProposal() {
 
 
 /* =========================================
-   CREAR CORAZONES
+   CORAZONES
 ========================================= */
 
 function createHeartBurst(
@@ -684,20 +737,18 @@ function createHeartBurst(
   amount = 15
 ) {
 
-  /*
-   * Símbolos disponibles.
-   */
-
   const symbols = [
+
     "♡",
     "♥",
     "♡",
     "♡"
+
   ];
 
 
   /*
-   * Creamos varios corazones.
+   * Creamos cada corazón.
    */
 
   for (
@@ -707,7 +758,9 @@ function createHeartBurst(
   ) {
 
     const heart =
-      document.createElement("span");
+      document.createElement(
+        "span"
+      );
 
 
     heart.className =
@@ -715,8 +768,7 @@ function createHeartBurst(
 
 
     /*
-     * Elegimos aleatoriamente
-     * el símbolo.
+     * Símbolo aleatorio.
      */
 
     heart.textContent =
@@ -729,7 +781,7 @@ function createHeartBurst(
 
 
     /*
-     * Ángulo aleatorio.
+     * Dirección aleatoria.
      */
 
     const angle =
@@ -739,7 +791,7 @@ function createHeartBurst(
 
 
     /*
-     * Distancia aleatoria.
+     * Distancia.
      */
 
     const distance =
@@ -766,7 +818,7 @@ function createHeartBurst(
 
 
     /*
-     * Tamaño aleatorio.
+     * Tamaño.
      */
 
     const size =
@@ -775,7 +827,7 @@ function createHeartBurst(
 
 
     /*
-     * Rotación aleatoria.
+     * Rotación.
      */
 
     const rotation =
@@ -792,30 +844,25 @@ function createHeartBurst(
       `${x}px`
     );
 
-
     heart.style.setProperty(
       "--y",
       `${y}px`
     );
-
 
     heart.style.setProperty(
       "--vx",
       `${vx}px`
     );
 
-
     heart.style.setProperty(
       "--vy",
       `${vy}px`
     );
 
-
     heart.style.setProperty(
       "--size",
       `${size}rem`
     );
-
 
     heart.style.setProperty(
       "--rotation",
@@ -824,7 +871,7 @@ function createHeartBurst(
 
 
     /*
-     * Lo agregamos al documento.
+     * Agregamos al documento.
      */
 
     document.body.appendChild(
@@ -833,636 +880,21 @@ function createHeartBurst(
 
 
     /*
-     * Lo eliminamos después de
-     * terminar la animación.
+     * Eliminamos después
+     * de la animación.
      */
 
-    setTimeout(() => {
+    setTimeout(
+      () => {
 
-      heart.remove();
+        heart.remove();
 
-    }, 1900);
-
-  }
-
-}
-
-
-/* =========================================
-   ERROR DE AUDIO
-========================================= */
-
-song.addEventListener(
-  "error",
-  () => {
-
-    console.warn(
-      "No se pudo cargar la canción. " +
-      "Verifica que exista: " +
-      "assets/Miranda - Perfecta (letra).mp3"
+      },
+      1900
     );
 
   }
-);const playBtn = document.getElementById("playBtn");
-const song = document.getElementById("song");
 
-const welcomeScreen =
-  document.getElementById("welcomeScreen");
-
-const experience =
-  document.getElementById("experience");
-
-const finalSection =
-  document.getElementById("finalSection");
-
-const letterParagraphs = [
-  ...document.querySelectorAll(".letter-paragraph")
-];
-
-const readingHint =
-  document.getElementById("readingHint");
-
-const yesButton =
-  document.getElementById("yesButton");
-
-const hugButton =
-  document.getElementById("hugButton");
-
-
-/* =========================================
-   CONFIGURACIÓN
-========================================= */
-
-/*
- * Velocidad aproximada de lectura.
- * 190 palabras/minuto es un ritmo natural.
- */
-const WORDS_PER_MINUTE = 190;
-
-/*
- * Tiempo extra para que no se sienta apresurado.
- */
-const EXTRA_READING_TIME = 2500;
-
-/*
- * Nunca avanzará demasiado rápido aunque
- * el párrafo sea muy corto.
- */
-const MIN_PARAGRAPH_TIME = 4500;
-
-/*
- * Después de terminar el último párrafo,
- * esperamos un poco antes de comenzar.
- */
-const BEFORE_SCROLL_DELAY = 3500;
-
-/*
- * Duración del desplazamiento automático.
- */
-const AUTO_SCROLL_DURATION = 5500;
-
-
-/* =========================================
-   ESTADO
-========================================= */
-
-let started = false;
-
-let userScrolled = false;
-
-let autoScrolling = false;
-
-
-/* =========================================
-   UTILIDADES
-========================================= */
-
-function wait(ms) {
-  return new Promise(resolve => {
-    setTimeout(resolve, ms);
-  });
-}
-
-
-/* =========================================
-   INICIAR
-========================================= */
-
-playBtn.addEventListener("click", async () => {
-
-  if (started) {
-    return;
-  }
-
-  started = true;
-
-  playBtn.disabled = true;
-
-
-  /*
-   * Como la reproducción comienza después de
-   * un toque/click, funciona mucho mejor en móvil.
-   */
-
-  try {
-    song.currentTime = 0;
-
-    await song.play();
-
-  } catch (error) {
-
-    console.warn(
-      "No se pudo iniciar la canción:",
-      error
-    );
-  }
-
-
-  welcomeScreen.classList.add("hidden");
-
-  experience.classList.remove("hidden");
-
-  window.scrollTo({
-    top: 0,
-    behavior: "instant"
-  });
-
-
-  await revealLetter();
-});
-
-
-/* =========================================
-   REVELAR CARTA
-========================================= */
-
-async function revealLetter() {
-
-  letterParagraphs.forEach(paragraph => {
-    paragraph.classList.remove("visible");
-  });
-
-
-  for (
-    let i = 0;
-    i < letterParagraphs.length;
-    i++
-  ) {
-
-    const paragraph =
-      letterParagraphs[i];
-
-
-    /*
-     * Calculamos aproximadamente cuánto
-     * tardaría en leer este párrafo.
-     */
-
-    const words =
-      paragraph.textContent
-        .trim()
-        .split(/\s+/)
-        .filter(Boolean)
-        .length;
-
-
-    const calculatedTime =
-      (words / WORDS_PER_MINUTE) * 60000;
-
-
-    const readingTime =
-      Math.max(
-        MIN_PARAGRAPH_TIME,
-        calculatedTime + EXTRA_READING_TIME
-      );
-
-
-    paragraph.classList.add("visible");
-
-
-    createHeartBurst(
-      window.innerWidth * (
-        0.35 +
-        Math.random() * 0.3
-      ),
-      window.innerHeight * (
-        0.25 +
-        Math.random() * 0.35
-      ),
-      i === letterParagraphs.length - 1
-        ? 8
-        : 2
-    );
-
-
-    /*
-     * Si ella ya empezó a deslizar manualmente,
-     * dejamos de controlar el ritmo.
-     */
-
-    if (userScrolled) {
-      await wait(300);
-    } else {
-      await wait(readingTime);
-    }
-  }
-
-
-  readingHint.classList.remove("hidden");
-
-
-  /*
-   * Si ella decidió deslizar manualmente,
-   * no hacemos absolutamente ningún auto-scroll.
-   */
-
-  if (userScrolled) {
-    return;
-  }
-
-
-  await wait(BEFORE_SCROLL_DELAY);
-
-
-  if (userScrolled) {
-    return;
-  }
-
-
-  autoScrollToQuestion();
-}
-
-
-/* =========================================
-   AUTO SCROLL
-========================================= */
-
-function autoScrollToQuestion() {
-
-  if (userScrolled) {
-    return;
-  }
-
-
-  autoScrolling = true;
-
-
-  const startPosition =
-    window.scrollY;
-
-
-  const question =
-    document.getElementById(
-      "questionSection"
-    );
-
-
-  const targetPosition =
-    question.getBoundingClientRect().top +
-    window.scrollY -
-    20;
-
-
-  const distance =
-    targetPosition - startPosition;
-
-
-  const startTime =
-    performance.now();
-
-
-  function animate(currentTime) {
-
-    /*
-     * Si ella desliza, paramos inmediatamente.
-     */
-
-    if (userScrolled) {
-
-      autoScrolling = false;
-
-      return;
-    }
-
-
-    const elapsed =
-      currentTime - startTime;
-
-
-    const progress =
-      Math.min(
-        elapsed / AUTO_SCROLL_DURATION,
-        1
-      );
-
-
-    /*
-     * Curva suave:
-     *
-     * lento -> rápido -> lento
-     */
-
-    const eased =
-      progress < 0.5
-        ? 2 * progress * progress
-        : 1 -
-          Math.pow(
-            -2 * progress + 2,
-            2
-          ) / 2;
-
-
-    window.scrollTo(
-      0,
-      startPosition +
-      distance * eased
-    );
-
-
-    if (progress < 1) {
-
-      requestAnimationFrame(
-        animate
-      );
-
-    } else {
-
-      autoScrolling = false;
-    }
-  }
-
-
-  requestAnimationFrame(animate);
-}
-
-
-/* =========================================
-   DETECTAR SCROLL MANUAL
-========================================= */
-
-/*
- * IMPORTANTE:
- *
- * No usamos "scroll" porque el propio
- * auto-scroll también dispara ese evento.
- *
- * Usamos touchstart/touchmove/wheel,
- * que sí indican intención del usuario.
- */
-
-function cancelAutomaticScroll() {
-
-  if (!autoScrolling) {
-    return;
-  }
-
-  userScrolled = true;
-}
-
-
-window.addEventListener(
-  "touchstart",
-  cancelAutomaticScroll,
-  {
-    passive: true
-  }
-);
-
-
-window.addEventListener(
-  "touchmove",
-  cancelAutomaticScroll,
-  {
-    passive: true
-  }
-);
-
-
-window.addEventListener(
-  "wheel",
-  cancelAutomaticScroll,
-  {
-    passive: true
-  }
-);
-
-
-window.addEventListener(
-  "keydown",
-  event => {
-
-    const scrollKeys = [
-      "ArrowDown",
-      "ArrowUp",
-      "PageDown",
-      "PageUp",
-      "Home",
-      "End",
-      " "
-    ];
-
-
-    if (
-      scrollKeys.includes(event.key)
-    ) {
-      userScrolled = true;
-    }
-  }
-);
-
-
-/* =========================================
-   BOTÓN "SÍ"
-========================================= */
-
-yesButton.addEventListener(
-  "click",
-  acceptProposal
-);
-
-
-hugButton.addEventListener(
-  "click",
-  acceptProposal
-);
-
-
-async function acceptProposal() {
-
-  yesButton.disabled = true;
-
-  hugButton.disabled = true;
-
-
-  createHeartBurst(
-    window.innerWidth / 2,
-    window.innerHeight * 0.45,
-    30
-  );
-
-
-  await wait(500);
-
-
-  experience.classList.add("hidden");
-
-  finalSection.classList.remove("hidden");
-
-
-  window.scrollTo({
-    top: 0,
-    behavior: "instant"
-  });
-
-
-  /*
-   * Otra explosión de corazones cuando aparece
-   * la pantalla final.
-   */
-
-  await wait(500);
-
-
-  createHeartBurst(
-    window.innerWidth / 2,
-    window.innerHeight * 0.4,
-    40
-  );
-
-
-  try {
-
-    localStorage.setItem(
-      "forVv_answer",
-      "yes"
-    );
-
-  } catch (error) {
-
-    console.warn(
-      "No se pudo guardar la respuesta."
-    );
-  }
-}
-
-
-/* =========================================
-   CORAZONES
-========================================= */
-
-function createHeartBurst(
-  x,
-  y,
-  amount = 15
-) {
-
-  const symbols = [
-    "♡",
-    "♥",
-    "♡",
-    "♡"
-  ];
-
-
-  for (
-    let i = 0;
-    i < amount;
-    i++
-  ) {
-
-    const heart =
-      document.createElement("span");
-
-
-    heart.className =
-      "heart-particle";
-
-
-    heart.textContent =
-      symbols[
-        Math.floor(
-          Math.random() *
-          symbols.length
-        )
-      ];
-
-
-    const angle =
-      Math.random() *
-      Math.PI *
-      2;
-
-
-    const distance =
-      70 +
-      Math.random() * 170;
-
-
-    const vx =
-      Math.cos(angle) *
-      distance;
-
-
-    const vy =
-      Math.sin(angle) *
-      distance;
-
-
-    const size =
-      0.8 +
-      Math.random() * 1.2;
-
-
-    const rotation =
-      -40 +
-      Math.random() * 80;
-
-
-    heart.style.setProperty(
-      "--x",
-      `${x}px`
-    );
-
-
-    heart.style.setProperty(
-      "--y",
-      `${y}px`
-    );
-
-
-    heart.style.setProperty(
-      "--vx",
-      `${vx}px`
-    );
-
-
-    heart.style.setProperty(
-      "--vy",
-      `${vy}px`
-    );
-
-
-    heart.style.setProperty(
-      "--size",
-      `${size}rem`
-    );
-
-
-    heart.style.setProperty(
-      "--rotation",
-      `${rotation}deg`
-    );
-
-
-    document.body.appendChild(
-      heart
-    );
-
-
-    setTimeout(() => {
-      heart.remove();
-    }, 1900);
-  }
 }
 
 
