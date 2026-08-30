@@ -1,93 +1,363 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <meta name="theme-color" content="#fff1f7">
+  <meta name="description" content="Una pequeña sorpresa para ti ♡">
+
   <title>Para ti ♡</title>
 
-  <link rel="stylesheet" href="style.css">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <div class="sparkles"></div>
+  <!-- Fondo -->
+  <div class="background-glow"></div>
+  <div class="stars" aria-hidden="true"></div>
+  <div id="heartContainer" aria-hidden="true"></div>
 
-  <div class="floating-hearts"></div>
+  <main>
 
-  <main class="container">
+    <!-- =========================================================
+         1. BIENVENIDA
+    ========================================================== -->
 
-    <section class="welcome-screen" id="welcomeScreen">
+    <section id="welcomeScreen" class="screen welcome-screen">
 
-      <img src="assets/pusheen-love.gif"
-           class="pusheen-top"
-           alt="pusheen">
+      <div class="welcome-content">
 
-      <div class="letter-card">
+        <div class="eyebrow">
+          hecho especialmente para ti
+        </div>
 
-        <h1>Una cartita para tiii	 ♡</h1>
+        <img
+          src="assets/pusheen-love.gif"
+          class="welcome-pusheen"
+          alt="Pusheen con corazones"
+        >
 
-        <p>
-          Tengo algo bonito que quiero compartir contigo...
+        <h1>
+          Tengo algo<br>
+          <em>para ti.</em>
+        </h1>
+
+        <p class="welcome-description">
+          No sabía muy bien cómo decirte todo esto,
+          así que decidí escribirlo.
         </p>
 
-        <button id="playBtn">
-          Reprodúceme ♡
+        <button id="startButton" class="primary-button">
+          <span>abre esto</span>
+          <span class="button-heart">♡</span>
         </button>
 
+        <div class="small-note">
+          ponte cómoda, quiero decirte algo
+        </div>
+
       </div>
+
     </section>
 
 
-    <section class="experience hidden" id="experience">
+    <!-- =========================================================
+         2. REVEAL
+    ========================================================== -->
 
-      <div class="music-badge">
-        🎵 Sonando algo especial...
+    <section id="revealScreen" class="screen reveal-screen hidden">
+
+      <div class="reveal-content">
+
+        <div class="reveal-line"></div>
+
+        <p class="reveal-small">
+          Antes de seguir...
+        </p>
+
+        <h2>
+          hay algo que<br>
+          quiero que sepas.
+        </h2>
+
+        <div class="reveal-heart">
+          ♡
+        </div>
+
       </div>
 
-      <img src="assets/descarga.png"
-           class="floating-pusheen left"
-           alt="">
+    </section>
 
-      <img src="assets/descarga1.png"
-           class="floating-pusheen right"
-           alt="">
 
-      <div class="letter-container">
+    <!-- =========================================================
+         3. CARTA
+    ========================================================== -->
 
-        <div class="letter-paper">
+    <section id="letterScreen" class="screen letter-screen hidden">
 
-          <h2>💌 Para ti</h2>
+      <div class="music-indicator">
+        <span class="music-dot"></span>
+        algo especial está sonando...
+      </div>
 
-          <div id="typewriterText"></div>
+      <article class="letter-card">
+
+        <div class="letter-header">
+
+          <span class="letter-symbol">♡</span>
+
+          <div>
+            <span class="letter-label">UNA CARTA PARA TI</span>
+            <h2>Amor mío</h2>
+          </div>
 
         </div>
+
+
+        <div id="letterContent" class="letter-content">
+
+          <p class="letter-paragraph">
+            A veces me pongo a pensar en todo lo que has llegado
+            a significar para mí y todavía me cuesta creer cómo una
+            persona puede convertirse en algo tan importante.
+          </p>
+
+          <p class="letter-paragraph">
+            Llegaste a mi vida y, sin darte cuenta, cambiaste
+            muchas cosas en mí. Contigo descubrí una forma de querer
+            que se siente diferente, más bonita, más sincera.
+          </p>
+
+          <p class="letter-paragraph">
+            Me encanta saber de ti. Me encanta despertar y encontrar
+            un mensaje tuyo, contarte cualquier tontería de mi día,
+            saber cómo estás y simplemente tenerte presente.
+          </p>
+
+          <p class="letter-paragraph">
+            No sé exactamente en qué momento te convertiste en
+            mi pensamiento favorito, pero ahora apareces en mi cabeza
+            incluso cuando no estoy intentando pensar en ti.
+          </p>
+
+          <p class="letter-paragraph">
+            Y entre tantas personas, entre tantos caminos que
+            podrían existir, mi corazón siempre termina escogiendo
+            el mismo lugar: tú.
+          </p>
+
+          <p class="letter-paragraph">
+            Te quiero muchísimo. Me encantas. Estoy completamente
+            enamorado de ti y cada día que pasa estoy más seguro
+            de que quiero seguir descubriendo todo esto contigo.
+          </p>
+
+        </div>
+
+
+        <button id="continueButton" class="continue-button hidden">
+          quiero decirte algo más
+          <span>↓</span>
+        </button>
+
+      </article>
+
+    </section>
+
+
+    <!-- =========================================================
+         4. LO QUE QUIERO CONTIGO
+    ========================================================== -->
+
+    <section id="dreamsScreen" class="screen dreams-screen hidden">
+
+      <div class="section-intro">
+
+        <span class="section-number">01</span>
+
+        <p class="eyebrow">
+          si me preguntas qué quiero...
+        </p>
+
+        <h2>
+          quiero <em>todo</em><br>
+          contigo.
+        </h2>
+
+      </div>
+
+
+      <div class="dream-list">
+
+        <div class="dream-item">
+          <span>01</span>
+          <p>Despertar algún día a tu lado.</p>
+        </div>
+
+        <div class="dream-item">
+          <span>02</span>
+          <p>Abrazarte sin tener que pensar en cuándo despedirnos.</p>
+        </div>
+
+        <div class="dream-item">
+          <span>03</span>
+          <p>Viajar, reírnos y hacer juntos recuerdos que solo sean nuestros.</p>
+        </div>
+
+        <div class="dream-item">
+          <span>04</span>
+          <p>Acompañarte en tus sueños y estar cuando necesites un lugar seguro.</p>
+        </div>
+
+        <div class="dream-item">
+          <span>05</span>
+          <p>Seguir eligiéndote incluso cuando pase el tiempo.</p>
+        </div>
+
+      </div>
+
+
+      <div class="dream-ending">
+
+        <p>
+          Pero sobre todo...
+        </p>
+
+        <strong>
+          quiero seguir construyendo esto contigo.
+        </strong>
+
+        <button id="questionButton" class="primary-button">
+          hay algo que quiero preguntarte
+          <span>♡</span>
+        </button>
+
       </div>
 
     </section>
 
-    <section id="finalSection" class="final-section hidden">
 
-      <div class="final-card">
+    <!-- =========================================================
+         5. PREGUNTA
+    ========================================================== -->
 
-        <img src="assets/pusheen1.gif" class="final-pusheen">
+    <section id="questionScreen" class="screen question-screen hidden">
 
-        <h2>♡</h2>
+      <div class="question-content">
 
-        <p>
-          No sé si exista algo realmente perfecto...
-          <br><br>
-          pero hay personas que hacen que ciertos momentos
-          se sientan así.
-          <br><br>
-          Gracias por existir un ratito en este mundo
-          y estar a mi lado. 💌
+        <img
+          src="assets/pusheen-love.gif"
+          class="question-pusheen"
+          alt="Pusheen"
+        >
+
+        <p class="question-pre">
+          Después de todo lo que siento por ti...
         </p>
 
-        <button onclick="location.reload()">
-          Escucharlo otra vez ♡
-        </button>
+        <h2>
+          solo me falta<br>
+          preguntarte algo.
+        </h2>
+
+        <div class="question-divider">
+          <span></span>
+          ♡
+          <span></span>
+        </div>
+
+        <p class="question-label">
+          ¿Quieres ser mi...
+        </p>
+
+        <div class="roles">
+
+          <span>novia</span>
+          <span>pareja</span>
+          <span>persona favorita</span>
+          <span>compañera de aventuras</span>
+          <span>compañera de vida</span>
+
+        </div>
+
+        <h1 class="final-question">
+          ¿Quieres ser mi novia?
+        </h1>
+
+        <p class="question-subtitle">
+          🥺❤️
+        </p>
+
+        <div class="answer-buttons">
+
+          <button id="yesButton" class="yes-button">
+            Sí, quiero ❤️
+          </button>
+
+          <button id="hugButton" class="hug-button">
+            primero dame un abrazo 🥺
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         6. FINAL
+    ========================================================== -->
+
+    <section id="finalScreen" class="screen final-screen hidden">
+
+      <div class="final-content">
+
+        <div class="final-glow"></div>
+
+        <img
+          src="assets/pusheen-love.gif"
+          class="final-pusheen"
+          alt="Pusheen"
+        >
+
+        <p class="final-pre">
+          entonces...
+        </p>
+
+        <h1>
+          es oficial. ♡
+        </h1>
+
+        <div class="final-line"></div>
+
+        <p class="final-main">
+          Tú y yo.
+        </p>
+
+        <p class="final-text">
+          Y ahora empieza nuestra historia.
+        </p>
+
+        <p class="final-text secondary">
+          Gracias por elegirme.
+          <br>
+          Te quiero muchísimo.
+        </p>
+
+        <div class="final-heart">
+          ♥
+        </div>
 
       </div>
 
@@ -95,10 +365,22 @@
 
   </main>
 
-  <audio id="song">
-    <source src="assets/Miranda - Perfecta (letra).mp3" type="audio/mp3">
+
+  <!-- Música -->
+  <audio
+    id="song"
+    preload="auto"
+    src="assets/Miranda - Perfecta (letra).mp3">
   </audio>
 
+
+  <!-- Overlay de transición -->
+  <div id="transitionOverlay" class="transition-overlay hidden">
+    <div class="transition-heart">♡</div>
+  </div>
+
+
   <script src="script.js"></script>
+
 </body>
 </html>
