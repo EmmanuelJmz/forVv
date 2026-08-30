@@ -1,357 +1,499 @@
-const playBtn = document.getElementById('playBtn');
-const song = document.getElementById('song');
-const welcomeScreen = document.getElementById('welcomeScreen');
-const experience = document.getElementById('experience');
-const typewriter = document.getElementById('typewriterText');
-const finalSection = document.getElementById('finalSection');
-const letterPaper = document.querySelector('.letter-paper');
-const downloadLogBtn = document.getElementById('downloadLogBtn');
+/* ============================================================
+   ELEMENTOS
+============================================================ */
 
-// Imágenes disponibles
-const images = [
-  'assets/descarga.png',
-  'assets/descarga1.jpg',
-  'assets/descarga2.jpg',
-  'assets/descarga3.jpg',
-  'assets/images4.jpg'
+const startButton = document.getElementById("startButton");
+const continueButton = document.getElementById("continueButton");
+const questionButton = document.getElementById("questionButton");
+
+const yesButton = document.getElementById("yesButton");
+const hugButton = document.getElementById("hugButton");
+
+const song = document.getElementById("song");
+
+const welcomeScreen = document.getElementById("welcomeScreen");
+const revealScreen = document.getElementById("revealScreen");
+const letterScreen = document.getElementById("letterScreen");
+const dreamsScreen = document.getElementById("dreamsScreen");
+const questionScreen = document.getElementById("questionScreen");
+const finalScreen = document.getElementById("finalScreen");
+
+const transitionOverlay = document.getElementById("transitionOverlay");
+const heartContainer = document.getElementById("heartContainer");
+
+const letterParagraphs = [
+  ...document.querySelectorAll(".letter-paragraph")
 ];
 
-const messages = [
-  { time: 3,   text: "Tan pronto yo te vi" },
-  { time: 5,   text: "No pude descubrir" },
-  { time: 7,   text: "El amor a primera vista no funciona en mí" },
-  { time: 11,  text: "Después de amarte comprendí" },
-  { time: 14,  text: "Que no estaría tan mal" },
-  { time: 15,  text: "Probar tu otra mitad" },
-  { time: 18,  text: "No me importó si arruinaríamos nuestra amistad" },
-  { time: 21,  text: "No me importó y ya qué más da" },
-  { time: 24,  text: "Éramos tan buenos amigos hasta hoy" },
-  { time: 27,  text: "Que yo probé tu desempeño en el amor" },
-  { time: 30,  text: "Me aproveché de que habíamos tomado tanto" },
-  { time: 33,  text: "Te fuiste dejando y te agarré" },
-  { time: 35,  text: "A pesar de saber que estaba todo mal" },
-  { time: 38,  text: "Lo continuamos hasta juntos terminar" },
-  { time: 40,  text: "Cuando caímos en lo que estaba pasando" },
-  { time: 43,  text: "Te seguí besando y fue..." },
-  { time: 45,  text: "Solo tú, no necesito más" },
-  { time: 47,  text: "Te adoraría lo que dure la eternidad" },
-  { time: 51,  text: "Debes ser perfecta para, perfecto para" },
-  { time: 54,  text: "Perfecta para mí, mi amor" },
-  { time: 58,  text: "¿Cómo fue que de papel cambié?" },
-  { time: 60,  text: "Eras mi amiga y ahora eres mi mujer" },
-  { time: 64,  text: "Debes ser perfectamente, exactamente" },
-  { time: 67,  text: "Lo que yo siempre soñé" },
-  { time: 74,  text: "El tiempo que pasó" },
-  { time: 76,  text: "Resultó aún mejor" },
-  { time: 79,  text: "Nos conocíamos de antes y sabíamos" },
-  { time: 81,  text: "Lo que queríamos los dos" },
-  { time: 84,  text: "Entonces el amor" },
-  { time: 88,  text: "Nos tiene de rehén" },
-  { time: 90,  text: "Seré tu eterna enamorada y te aseguro que" },
-  { time: 93,  text: "Todas las noches te amaré" },
-  { time: 96,  text: "Éramos tan buenos amigos hasta hoy" },
-  { time: 117, text: "Solo tú, no necesito más" },
-  { time: 144, text: "Solo tú, no necesito más" },
-  { time: 147, text: "Te adoraría lo que dure la eternidad" },
-  { time: 150, text: "Debes ser perfecta para, perfecto para" },
-  { time: 154, text: "Perfecta para mí, mi amor" },
-  { time: 157, text: "¿Cómo fue que de papel cambié?" },
-  { time: 160, text: "Eras mi amiga y ahora eres mi mujer" },
-  { time: 163, text: "Debes ser perfectamente, exactamente" },
-  { time: 167, text: "Lo que yo siempre soñé" }
-];
 
-// Sin offset: los tiempos del array ya están ajustados a la canción
-const lyricOffset = 0;
+/* ============================================================
+   CONFIGURACIÓN
+============================================================ */
 
-// Activa esto para imprimir tiempos de depuración en la consola.
-const debugLyrics = true;
-let lyricDebugInterval = null;
-const lyricDebugLog = [];
+const LETTER_DELAY = 1800;
 
-function formatTime(seconds) {
-  const total = Math.max(0, seconds);
-  const minutes = Math.floor(total / 60);
-  const secs = Math.floor(total % 60);
-  const millis = Math.floor((total % 1) * 1000);
-  return `${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}.${String(millis).padStart(3, '0')}`;
+let currentStep = 0;
+let started = false;
+
+
+/* ============================================================
+   UTILIDADES
+============================================================ */
+
+function wait(ms) {
+  return new Promise(resolve => {
+    setTimeout(resolve, ms);
+  });
 }
 
-function logLyricCueSheet() {
-  console.table(
-    messages.map((message, index) => ({
-      index: index + 1,
-      time: formatTime(message.time),
-      text: message.text,
-    }))
+
+function showScreen(screen) {
+  const screens = [
+    welcomeScreen,
+    revealScreen,
+    letterScreen,
+    dreamsScreen,
+    questionScreen,
+    finalScreen
+  ];
+
+  screens.forEach(item => {
+    item.classList.add("hidden");
+  });
+
+  screen.classList.remove("hidden");
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+
+function showTransition() {
+  transitionOverlay.classList.remove("hidden");
+}
+
+
+function hideTransition() {
+  transitionOverlay.classList.add("hidden");
+}
+
+
+/* ============================================================
+   INICIO
+============================================================ */
+
+startButton.addEventListener("click", async () => {
+
+  if (started) {
+    return;
+  }
+
+  started = true;
+
+  startButton.disabled = true;
+
+  /*
+   * La interacción del usuario permite reproducir
+   * audio en navegadores móviles.
+   */
+  try {
+    song.currentTime = 0;
+    await song.play();
+  } catch (error) {
+    console.log("El navegador bloqueó la reproducción automática.", error);
+  }
+
+  showTransition();
+
+  await wait(900);
+
+  showScreen(revealScreen);
+
+  await wait(2400);
+
+  showTransition();
+
+  await wait(700);
+
+  showScreen(letterScreen);
+
+  hideTransition();
+
+  revealLetter();
+});
+
+
+/* ============================================================
+   REVEAL DE LA CARTA
+============================================================ */
+
+async function revealLetter() {
+
+  letterParagraphs.forEach(paragraph => {
+    paragraph.classList.remove("visible");
+  });
+
+  /*
+   * Cada párrafo aparece lentamente.
+   * No hay letras de canción ni sincronización complicada:
+   * la música simplemente acompaña la experiencia.
+   */
+  for (let i = 0; i < letterParagraphs.length; i++) {
+
+    await wait(i === 0 ? 500 : LETTER_DELAY);
+
+    letterParagraphs[i].classList.add("visible");
+
+    createHeartBurst(
+      window.innerWidth * (0.35 + Math.random() * 0.3),
+      window.innerHeight * (0.25 + Math.random() * 0.4),
+      i === letterParagraphs.length - 1 ? 10 : 4
+    );
+  }
+
+  await wait(1200);
+
+  continueButton.classList.remove("hidden");
+
+  continueButton.animate(
+    [
+      {
+        opacity: 0,
+        transform: "translateY(10px)"
+      },
+      {
+        opacity: 1,
+        transform: "translateY(0)"
+      }
+    ],
+    {
+      duration: 700,
+      easing: "ease-out",
+      fill: "forwards"
+    }
   );
 }
 
-function startLyricDebugProbe() {
-  if (!debugLyrics || lyricDebugInterval) return;
 
-  lyricDebugLog.length = 0;
-  console.clear();
-  logLyricCueSheet();
-  console.info('[lyrics] Debug activo. Reproduce la canción y mira la consola.');
+/* ============================================================
+   CARTA → LO QUE QUIERO
+============================================================ */
 
-  lyricDebugInterval = setInterval(() => {
-    if (song.paused || song.ended) return;
+continueButton.addEventListener("click", async () => {
 
-    const adjustedTime = song.currentTime + lyricOffset;
-    const upcoming = messages.find((message) => message.time >= adjustedTime) || messages[messages.length - 1];
-    const previous = [...messages].reverse().find((message) => message.time <= adjustedTime);
+  showTransition();
 
-    console.log('[lyrics]', {
-      current: formatTime(adjustedTime),
-      previous: previous ? `${formatTime(previous.time)} - ${previous.text}` : null,
-      next: upcoming ? `${formatTime(upcoming.time)} - ${upcoming.text}` : null,
-    });
+  await wait(700);
 
-    lyricDebugLog.push(
-      `[${formatTime(adjustedTime)}] prev=${previous ? previous.text : 'null'} | next=${upcoming ? upcoming.text : 'null'}`
+  showScreen(dreamsScreen);
+
+  hideTransition();
+
+  createHeartBurst(
+    window.innerWidth / 2,
+    window.innerHeight / 2,
+    14
+  );
+});
+
+
+/* ============================================================
+   LO QUE QUIERO → PREGUNTA
+============================================================ */
+
+questionButton.addEventListener("click", async () => {
+
+  showTransition();
+
+  await wait(750);
+
+  showScreen(questionScreen);
+
+  hideTransition();
+
+  await wait(500);
+
+  createHeartBurst(
+    window.innerWidth / 2,
+    window.innerHeight * 0.35,
+    18
+  );
+});
+
+
+/* ============================================================
+   RESPUESTA
+============================================================ */
+
+yesButton.addEventListener("click", acceptProposal);
+
+hugButton.addEventListener("click", acceptProposal);
+
+
+async function acceptProposal() {
+
+  yesButton.disabled = true;
+  hugButton.disabled = true;
+
+  showTransition();
+
+  await wait(1000);
+
+  showScreen(finalScreen);
+
+  hideTransition();
+
+  /*
+   * Gran celebración final.
+   */
+  setTimeout(() => {
+    createHeartBurst(
+      window.innerWidth / 2,
+      window.innerHeight * 0.42,
+      35
     );
   }, 250);
-}
 
-function stopLyricDebugProbe() {
-  if (lyricDebugInterval) {
-    clearInterval(lyricDebugInterval);
-    lyricDebugInterval = null;
+  setTimeout(() => {
+    createHeartBurst(
+      window.innerWidth * 0.25,
+      window.innerHeight * 0.55,
+      20
+    );
+  }, 500);
+
+  setTimeout(() => {
+    createHeartBurst(
+      window.innerWidth * 0.75,
+      window.innerHeight * 0.55,
+      20
+    );
+  }, 750);
+
+  /*
+   * Guardamos solamente que llegó al final.
+   * No se envía información a ningún servidor.
+   */
+  try {
+    localStorage.setItem(
+      "forVv_answer",
+      "yes"
+    );
+  } catch (error) {
+    // Algunos navegadores pueden bloquear localStorage.
   }
+
+  /*
+   * Dejamos la música sonando.
+   */
 }
 
-function downloadLyricLog() {
-  if (!debugLyrics) return;
 
-  const lines = [
-    'Miranda! - Perfecta debug log',
-    `Generated: ${new Date().toISOString()}`,
-    '',
-    'Cue sheet:',
-    ...messages.map((message, index) => `${String(index + 1).padStart(2, '0')}. ${formatTime(message.time)} | ${message.text}`),
-    '',
-    'Playback log:',
-    ...lyricDebugLog,
-    ''
+/* ============================================================
+   CORAZONES
+============================================================ */
+
+function createHeartBurst(x, y, amount = 12) {
+
+  const symbols = [
+    "♡",
+    "♥",
+    "♡",
+    "♥",
+    "♡"
   ];
 
-  const blob = new Blob([lines.join('\n')], { type: 'text/plain;charset=utf-8' });
-  const url = URL.createObjectURL(blob);
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = `miranda-perfecta-debug-${Date.now()}.txt`;
-  document.body.appendChild(link);
-  link.click();
-  link.remove();
-  URL.revokeObjectURL(url);
-}
+  for (let i = 0; i < amount; i++) {
 
-if (downloadLogBtn) {
-  downloadLogBtn.addEventListener('click', () => {
-    if (!song.paused && !song.ended) {
-      console.info('[lyrics] Descargando log actual en medio de la reproducción.');
-    }
-    downloadLyricLog();
-  });
-}
+    const heart = document.createElement("span");
 
-// ── BOTÓN REPRODUCIR ──────────────────────────────────────────
-playBtn.addEventListener('click', async () => {
-  typewriter.innerHTML = '';
-  shownMessages = [];
+    heart.className = "heart-particle";
 
-  // 1. Mostrar imagen gigante romántica antes de la transición
-  showBigImageReveal(() => {
-    // 2. Transición de pantalla
-    welcomeScreen.classList.add('hidden');
-    experience.classList.remove('hidden');
+    heart.textContent =
+      symbols[
+        Math.floor(Math.random() * symbols.length)
+      ];
 
-    // 3. Reproducir canción
-    song.play().catch(() => {});
+    const angle =
+      Math.random() * Math.PI * 2;
 
-    // 3.1. Trazado de tiempos en consola para ajustar la sincronización
-    startLyricDebugProbe();
+    const distance =
+      70 + Math.random() * 180;
 
-    // 4. Fuegos artificiales al arrancar
-    for (let i = 0; i < 3; i++) {
-      setTimeout(() => createHeartFireworks(), i * 300);
-    }
+    const vx =
+      Math.cos(angle) * distance;
 
-    // 5. Imágenes flotantes periódicas
-    scheduleFloatingImages();
-  });
-});
+    const vy =
+      Math.sin(angle) * distance;
 
-// ── IMAGEN GIGANTE AL INICIO ──────────────────────────────────
-function showBigImageReveal(onDone) {
-  const randomImg = images[Math.floor(Math.random() * images.length)];
+    const size =
+      0.8 + Math.random() * 1.4;
 
-  const overlay = document.createElement('div');
-  overlay.className = 'big-reveal-overlay';
+    const rotation =
+      -35 + Math.random() * 70;
 
-  const imgEl = document.createElement('img');
-  imgEl.src = randomImg;
-  imgEl.className = 'big-reveal-img';
-  imgEl.alt = '';
+    heart.style.setProperty(
+      "--x",
+      `${x}px`
+    );
 
-  const heart = document.createElement('div');
-  heart.className = 'big-reveal-heart';
-  heart.textContent = '💖';
+    heart.style.setProperty(
+      "--y",
+      `${y}px`
+    );
 
-  overlay.appendChild(imgEl);
-  overlay.appendChild(heart);
-  document.body.appendChild(overlay);
+    heart.style.setProperty(
+      "--vx",
+      `${vx}px`
+    );
 
-  // Fuegos mientras aparece la imagen
-  setTimeout(() => createHeartFireworks(), 100);
-  setTimeout(() => createHeartFireworks(), 400);
+    heart.style.setProperty(
+      "--vy",
+      `${vy}px`
+    );
 
-  // Desaparecer después de 2.2s y continuar
-  setTimeout(() => {
-    overlay.classList.add('fade-out');
+    heart.style.setProperty(
+      "--size",
+      `${size}rem`
+    );
+
+    heart.style.setProperty(
+      "--rotation",
+      `${rotation}deg`
+    );
+
+    heartContainer.appendChild(heart);
+
     setTimeout(() => {
-      overlay.remove();
-      onDone();
-    }, 600);
-  }, 2200);
+      heart.remove();
+    }, 1900);
+  }
 }
 
-// ── SINCRONIZACIÓN DE LETRA ───────────────────────────────────
-let shownMessages = [];
 
-song.addEventListener('timeupdate', () => {
-  const adjustedTime = song.currentTime + lyricOffset;
+/* ============================================================
+   CORAZONES SUAVES EN BACKGROUND
+============================================================ */
 
-  messages.forEach((message, index) => {
-    if (adjustedTime >= message.time && !shownMessages.includes(index)) {
-      shownMessages.push(index);
-      typeText(message.text);
-      createHeartFireworks();
-      animateLetter();
+function createAmbientHeart() {
 
-      // Más fuegos en momentos especiales
-      if (index % 4 === 0) {
-        setTimeout(() => createHeartFireworks(), 250);
+  const heart = document.createElement("span");
+
+  heart.textContent =
+    Math.random() > 0.5 ? "♡" : "·";
+
+  heart.style.position = "fixed";
+
+  heart.style.left =
+    `${Math.random() * 100}%`;
+
+  heart.style.bottom = "-30px";
+
+  heart.style.color =
+    "rgba(217, 87, 134, 0.18)";
+
+  heart.style.fontSize =
+    `${0.7 + Math.random() * 0.8}rem`;
+
+  heart.style.pointerEvents = "none";
+
+  heart.style.zIndex = "2";
+
+  heart.animate(
+    [
+      {
+        transform: "translateY(0) rotate(0deg)",
+        opacity: 0
+      },
+      {
+        opacity: 1
+      },
+      {
+        transform:
+          `translateY(-110vh) rotate(${20 + Math.random() * 60}deg)`,
+        opacity: 0
       }
+    ],
+    {
+      duration:
+        9000 + Math.random() * 7000,
+
+      easing: "linear",
+
+      fill: "forwards"
     }
-  });
+  );
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 17000);
+}
+
+
+/*
+ * Poquitos corazones ambientales.
+ * No interfieren con la lectura.
+ */
+setInterval(createAmbientHeart, 2200);
+
+
+/* ============================================================
+   CONTROL DE AUDIO
+============================================================ */
+
+song.addEventListener("ended", () => {
+
+  /*
+   * Si la canción termina antes de que llegue a la pregunta,
+   * simplemente dejamos la página funcionando.
+   *
+   * No mostramos automáticamente la propuesta:
+   * ella debe avanzar por la experiencia.
+   */
+
+  console.log("La canción terminó.");
 });
 
-// ── EFECTO TYPEWRITER ─────────────────────────────────────────
-function typeText(text) {
-  const p = document.createElement('p');
-  p.className = 'lyric-line';
-  p.textContent = text;
-  typewriter.appendChild(p);
 
-  // Auto-scroll suave al final
-  typewriter.scrollTop = typewriter.scrollHeight;
-}
+song.addEventListener("error", () => {
 
-// ── FUEGOS ARTIFICIALES DE CORAZONES ─────────────────────────
-function createHeartFireworks() {
-  const heartCount = 18;
-  const colors = ['♡', '♥', '💖', '💕', '💗', '💞', '💓', '💘'];
+  console.warn(
+    "No se pudo cargar la canción. Revisa la ruta del archivo."
+  );
 
-  // Posición aleatoria en la pantalla (no siempre el centro)
-  const originX = window.innerWidth  * (0.2 + Math.random() * 0.6);
-  const originY = window.innerHeight * (0.2 + Math.random() * 0.6);
-
-  for (let i = 0; i < heartCount; i++) {
-    const heart = document.createElement('div');
-    heart.className = 'heart-particle';
-    heart.textContent = colors[Math.floor(Math.random() * colors.length)];
-
-    const angle    = (i / heartCount) * Math.PI * 2;
-    const velocity = 4 + Math.random() * 5;
-    const size     = 1.2 + Math.random() * 1.8;
-    const vx       = Math.cos(angle) * velocity * 90;
-    const vy       = Math.sin(angle) * velocity * 90;
-
-    heart.style.setProperty('--vx', vx + 'px');
-    heart.style.setProperty('--vy', vy + 'px');
-    heart.style.fontSize = size + 'rem';
-    // Usar position fixed directamente en el body
-    heart.style.position = 'fixed';
-    heart.style.left = originX + 'px';
-    heart.style.top  = originY + 'px';
-    heart.style.zIndex = '99999';
-    heart.style.pointerEvents = 'none';
-
-    document.body.appendChild(heart);
-
-    // Limpiar después de la animación
-    setTimeout(() => heart.remove(), 2100);
-  }
-}
-
-// ── ANIMAR CARTA ──────────────────────────────────────────────
-function animateLetter() {
-  if (!letterPaper) return;
-  letterPaper.classList.add('letter-beat');
-  setTimeout(() => letterPaper.classList.remove('letter-beat'), 500);
-}
-
-// ── IMÁGENES FLOTANTES PERIÓDICAS ─────────────────────────────
-function scheduleFloatingImages() {
-  // Primera tanda inmediata
-  spawnFloatingImages(4);
-
-  // Cada 18 segundos aparecen más mientras suena la canción
-  const intervalId = setInterval(() => {
-    if (song.paused || song.ended) {
-      clearInterval(intervalId);
-      return;
-    }
-    spawnFloatingImages(2 + Math.floor(Math.random() * 3));
-  }, 18000);
-}
-
-function spawnFloatingImages(count) {
-  const container = document.querySelector('.experience');
-  if (!container) return;
-
-  for (let i = 0; i < count; i++) {
-    setTimeout(() => {
-      const imgWrapper = document.createElement('div');
-      imgWrapper.className = 'floating-image-wrapper';
-
-      const img = document.createElement('img');
-      img.src = images[Math.floor(Math.random() * images.length)];
-      img.alt = '';
-
-      const randomLeft     = Math.random() * 88 + 6; // 6%–94%
-      const randomDelay    = Math.random() * 1.5;
-      const randomDuration = 10 + Math.random() * 6;
-
-      imgWrapper.style.setProperty('--left',     randomLeft + '%');
-      imgWrapper.style.setProperty('--delay',    randomDelay + 's');
-      imgWrapper.style.setProperty('--duration', randomDuration + 's');
-
-      imgWrapper.appendChild(img);
-      container.appendChild(imgWrapper);
-
-      const totalMs = (randomDelay + randomDuration) * 1000;
-      setTimeout(() => imgWrapper.remove(), totalMs + 100);
-    }, i * 700);
-  }
-}
-
-// ── FINAL ─────────────────────────────────────────────────────
-song.addEventListener('ended', () => {
-  stopLyricDebugProbe();
-  downloadLyricLog();
-  experience.classList.add('hidden');
-  finalSection.classList.remove('hidden');
-  // Pequeña celebración al final
-  for (let i = 0; i < 5; i++) {
-    setTimeout(() => createHeartFireworks(), i * 200);
-  }
 });
 
-song.addEventListener('pause', () => {
-  if (!song.ended) {
-    stopLyricDebugProbe();
+
+/* ============================================================
+   TOUCH / MÓVIL
+============================================================ */
+
+document.addEventListener(
+  "touchstart",
+  () => {},
+  {
+    passive: true
   }
-});
+);
+
+
+/* ============================================================
+   INICIO
+============================================================ */
+
+console.log(
+  "%c♡ Para ti ♡",
+  `
+    color: #d95786;
+    font-size: 22px;
+    font-weight: bold;
+  `
+);
+
+console.log(
+  "La experiencia está lista."
+);
