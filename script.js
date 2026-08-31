@@ -36,15 +36,67 @@ const hugButton =
 
 
 /* =========================================
-   CONFIGURACIÓN
+   CONTADOR
+========================================= */
+
+const counterButton =
+  document.getElementById(
+    "counterButton"
+  );
+
+const relationshipCounter =
+  document.getElementById(
+    "relationshipCounter"
+  );
+
+const daysElement =
+  document.getElementById(
+    "days"
+  );
+
+const hoursElement =
+  document.getElementById(
+    "hours"
+  );
+
+const minutesElement =
+  document.getElementById(
+    "minutes"
+  );
+
+const secondsElement =
+  document.getElementById(
+    "seconds"
+  );
+
+
+/*
+ * FECHA DE INICIO DE LA RELACIÓN
+ *
+ * 30 de agosto de 2026
+ * 5:50 PM
+ *
+ * Ciudad de México = UTC-06:00
+ */
+
+const relationshipStart =
+  new Date(
+    "2026-08-30T17:50:00-06:00"
+  );
+
+
+let counterInterval = null;
+
+
+/* =========================================
+   CONFIGURACIÓN DE LECTURA
 ========================================= */
 
 /*
- * Velocidad de lectura.
+ * Antes era 190.
  *
- * La versión anterior utilizaba 190.
- * Ahora utilizamos 380 para que sea
- * aproximadamente el doble de rápida.
+ * 380 hace que la carta avance
+ * aproximadamente el doble de rápido.
  */
 
 const WORDS_PER_MINUTE = 380;
@@ -66,14 +118,14 @@ const MIN_PARAGRAPH_TIME = 2200;
 
 /*
  * Tiempo después de terminar la carta
- * antes de iniciar el auto-scroll.
+ * antes del auto-scroll.
  */
 
 const BEFORE_SCROLL_DELAY = 1800;
 
 
 /*
- * Duración del desplazamiento automático.
+ * Duración del auto-scroll.
  */
 
 const AUTO_SCROLL_DURATION = 5500;
@@ -98,10 +150,12 @@ function wait(ms) {
 
   return new Promise(
     resolve => {
+
       setTimeout(
         resolve,
         ms
       );
+
     }
   );
 
@@ -117,11 +171,13 @@ playBtn.addEventListener(
   async () => {
 
     /*
-     * Evita iniciar dos veces.
+     * Evitamos iniciar dos veces.
      */
 
     if (started) {
+
       return;
+
     }
 
     started = true;
@@ -130,11 +186,7 @@ playBtn.addEventListener(
 
 
     /*
-     * Inicia la canción.
-     *
-     * Al ocurrir después del click,
-     * los navegadores móviles permiten
-     * normalmente la reproducción.
+     * Iniciamos la canción.
      */
 
     try {
@@ -154,7 +206,7 @@ playBtn.addEventListener(
 
 
     /*
-     * Cambiamos de la portada
+     * Cambiamos de portada
      * a la carta.
      */
 
@@ -168,8 +220,7 @@ playBtn.addEventListener(
 
 
     /*
-     * Nos aseguramos de empezar
-     * arriba de todo.
+     * Comenzamos arriba.
      */
 
     window.scrollTo({
@@ -179,7 +230,7 @@ playBtn.addEventListener(
 
 
     /*
-     * Comienza la carta.
+     * Comenzamos la carta.
      */
 
     await revealLetter();
@@ -195,8 +246,8 @@ playBtn.addEventListener(
 async function revealLetter() {
 
   /*
-   * Ocultamos inicialmente todos
-   * los párrafos.
+   * Ocultamos inicialmente
+   * todos los párrafos.
    */
 
   letterParagraphs.forEach(
@@ -211,7 +262,7 @@ async function revealLetter() {
 
 
   /*
-   * Recorremos cada párrafo.
+   * Mostramos cada párrafo.
    */
 
   for (
@@ -225,7 +276,7 @@ async function revealLetter() {
 
 
     /*
-     * Contamos las palabras.
+     * Contamos palabras.
      */
 
     const words =
@@ -237,7 +288,7 @@ async function revealLetter() {
 
 
     /*
-     * Calculamos el tiempo
+     * Calculamos tiempo
      * aproximado de lectura.
      */
 
@@ -250,8 +301,6 @@ async function revealLetter() {
 
     /*
      * Tiempo final.
-     *
-     * Nunca será menor a 2.2 segundos.
      */
 
     const readingTime =
@@ -298,8 +347,6 @@ async function revealLetter() {
 
 
     /*
-     * Esperamos el tiempo calculado.
-     *
      * Si ella comenzó a deslizar,
      * dejamos de controlar el ritmo.
      */
@@ -334,12 +381,14 @@ async function revealLetter() {
    */
 
   if (userScrolled) {
+
     return;
+
   }
 
 
   /*
-   * Pequeña pausa.
+   * Pausa antes del desplazamiento.
    */
 
   await wait(
@@ -348,16 +397,18 @@ async function revealLetter() {
 
 
   /*
-   * Comprobamos otra vez.
+   * Comprobamos nuevamente.
    */
 
   if (userScrolled) {
+
     return;
+
   }
 
 
   /*
-   * Desplazamos hacia la pregunta.
+   * Auto-scroll hacia la pregunta.
    */
 
   autoScrollToQuestion();
@@ -377,7 +428,9 @@ function autoScrollToQuestion() {
    */
 
   if (userScrolled) {
+
     return;
+
   }
 
 
@@ -427,6 +480,7 @@ function autoScrollToQuestion() {
       autoScrolling = false;
 
       return;
+
     }
 
 
@@ -506,9 +560,6 @@ function autoScrollToQuestion() {
 
 /*
  * TOUCHSTART
- *
- * En móvil, si toca la pantalla mientras
- * hacemos auto-scroll, cancelamos.
  */
 
 window.addEventListener(
@@ -530,9 +581,6 @@ window.addEventListener(
 
 /*
  * TOUCHMOVE
- *
- * Si empieza a arrastrar,
- * el control pasa a ella.
  */
 
 window.addEventListener(
@@ -575,8 +623,6 @@ window.addEventListener(
 
 /*
  * TECLADO
- *
- * Para computadora.
  */
 
 window.addEventListener(
@@ -608,6 +654,156 @@ window.addEventListener(
 
   }
 );
+
+
+/* =========================================
+   BOTÓN DEL CONTADOR
+========================================= */
+
+counterButton.addEventListener(
+  "click",
+  () => {
+
+    /*
+     * Mostramos el contador.
+     */
+
+    relationshipCounter.classList.remove(
+      "hidden"
+    );
+
+
+    /*
+     * Actualizamos inmediatamente.
+     */
+
+    updateRelationshipCounter();
+
+
+    /*
+     * Evitamos crear múltiples
+     * intervalos.
+     */
+
+    if (
+      counterInterval !== null
+    ) {
+
+      return;
+
+    }
+
+
+    /*
+     * Actualizamos cada segundo.
+     */
+
+    counterInterval =
+      setInterval(
+        updateRelationshipCounter,
+        1000
+      );
+
+  }
+);
+
+
+/* =========================================
+   ACTUALIZAR CONTADOR
+========================================= */
+
+function updateRelationshipCounter() {
+
+  const now =
+    new Date();
+
+
+  /*
+   * Diferencia en milisegundos.
+   */
+
+  let difference =
+    now.getTime() -
+    relationshipStart.getTime();
+
+
+  /*
+   * Si todavía no llegan las 5:50 PM,
+   * mostramos cero.
+   */
+
+  if (difference < 0) {
+
+    difference = 0;
+
+  }
+
+
+  /*
+   * Convertimos a segundos.
+   */
+
+  const totalSeconds =
+    Math.floor(
+      difference / 1000
+    );
+
+
+  /*
+   * Días completos.
+   */
+
+  const days =
+    Math.floor(
+      totalSeconds / 86400
+    );
+
+
+  /*
+   * Horas restantes.
+   */
+
+  const hours =
+    Math.floor(
+      (totalSeconds % 86400) / 3600
+    );
+
+
+  /*
+   * Minutos restantes.
+   */
+
+  const minutes =
+    Math.floor(
+      (totalSeconds % 3600) / 60
+    );
+
+
+  /*
+   * Segundos restantes.
+   */
+
+  const seconds =
+    totalSeconds % 60;
+
+
+  /*
+   * Actualizamos pantalla.
+   */
+
+  daysElement.textContent =
+    days;
+
+  hoursElement.textContent =
+    hours;
+
+  minutesElement.textContent =
+    minutes;
+
+  secondsElement.textContent =
+    seconds;
+
+}
 
 
 /* =========================================
@@ -819,6 +1015,7 @@ function createHeartBurst(
 
     /*
      * Tamaño.
+
      */
 
     const size =
@@ -908,8 +1105,9 @@ song.addEventListener(
 
     console.warn(
       "No se pudo cargar la canción. " +
-      "Verifica que exista: " +
-      "assets/Miranda - Perfecta (letra).mp3"
+      "Verifica que exista el archivo " +
+      "'Wicked Game Martin Winch Produced by Carl Doy.mp3' " +
+      "en la misma carpeta que index.html."
     );
 
   }
