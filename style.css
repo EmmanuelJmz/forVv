@@ -996,6 +996,265 @@ button {
 
 
 /* =========================================
+   CONTADOR DE RELACIÓN
+========================================= */
+
+.already-together {
+
+  margin-top:
+    35px;
+
+  text-align:
+    center;
+}
+
+
+.already-together p {
+
+  margin-bottom:
+    8px;
+
+  color:
+    #a98b94;
+
+  font-size:
+    0.75rem;
+}
+
+
+.counter-button {
+
+  border:
+    none;
+
+  padding:
+    5px 10px;
+
+  background:
+    transparent;
+
+  color:
+    var(--pink);
+
+  font-family:
+    "Quicksand",
+    sans-serif;
+
+  font-size:
+    0.78rem;
+
+  font-weight:
+    700;
+
+  cursor:
+    pointer;
+
+  text-decoration:
+    underline;
+
+  text-underline-offset:
+    4px;
+
+  transition:
+
+    color 0.25s ease,
+
+    transform 0.25s ease;
+}
+
+
+.counter-button:hover {
+
+  color:
+    var(--pink-light);
+
+  transform:
+    translateY(-1px);
+}
+
+
+.counter-button:active {
+
+  transform:
+    scale(0.96);
+}
+
+
+/* =========================================
+   CONTADOR
+========================================= */
+
+.relationship-counter {
+
+  width:
+    min(94vw, 620px);
+
+  margin:
+    30px auto 0;
+
+  padding:
+    28px 18px;
+
+  text-align:
+    center;
+
+  background:
+
+    linear-gradient(
+      145deg,
+      rgba(91, 18, 47, 0.88),
+      rgba(57, 0, 21, 0.96)
+    );
+
+  border:
+    1px solid
+    rgba(196, 106, 138, 0.16);
+
+  border-radius:
+    28px;
+
+  box-shadow:
+
+    0 20px 45px
+    rgba(0, 0, 0, 0.22);
+
+  animation:
+    counterIn 0.7s ease both;
+}
+
+
+.counter-title {
+
+  margin-bottom:
+    22px;
+
+  color:
+    #d8c4c8;
+
+  font-family:
+    "Pacifico",
+    cursive;
+
+  font-size:
+    1.35rem;
+
+  font-weight:
+    400;
+}
+
+
+.counter-numbers {
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  gap:
+    10px;
+
+  flex-wrap:
+    wrap;
+}
+
+
+.counter-numbers div {
+
+  min-width:
+    75px;
+
+  padding:
+    12px 8px;
+
+  border-radius:
+    17px;
+
+  background:
+    rgba(196, 106, 138, 0.07);
+
+  border:
+    1px solid
+    rgba(196, 106, 138, 0.09);
+}
+
+
+.counter-numbers strong {
+
+  display:
+    block;
+
+  color:
+    var(--pink);
+
+  font-size:
+    1.55rem;
+
+  font-weight:
+    700;
+}
+
+
+.counter-numbers span {
+
+  display:
+    block;
+
+  margin-top:
+    2px;
+
+  color:
+    #a98b94;
+
+  font-size:
+    0.62rem;
+
+  text-transform:
+    uppercase;
+
+  letter-spacing:
+    0.08em;
+}
+
+
+.counter-date {
+
+  margin-top:
+    20px;
+
+  color:
+    #9e818b;
+
+  font-size:
+    0.65rem;
+}
+
+
+@keyframes counterIn {
+
+  from {
+
+    opacity:
+      0;
+
+    transform:
+      translateY(15px)
+      scale(0.97);
+  }
+
+  to {
+
+    opacity:
+      1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+/* =========================================
    FINAL
 ========================================= */
 
@@ -1497,6 +1756,30 @@ button {
 
     font-size:
       3rem;
+  }
+
+
+  .counter-numbers {
+
+    gap:
+      6px;
+  }
+
+
+  .counter-numbers div {
+
+    min-width:
+      67px;
+
+    padding:
+      10px 5px;
+  }
+
+
+  .counter-numbers strong {
+
+    font-size:
+      1.3rem;
   }
 
 
